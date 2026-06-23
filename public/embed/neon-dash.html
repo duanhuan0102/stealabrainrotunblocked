@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Neon Dash Demo</title>
+    <style>
+      * { box-sizing: border-box; }
+      html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+      body {
+        display: grid;
+        place-items: center;
+        color: #f8f6ef;
+        background: #080a11;
+        font-family: Inter, "Segoe UI", Arial, sans-serif;
+      }
+      canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+      .hud {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 24px;
+        pointer-events: none;
+        font-size: 14px;
+        font-weight: 800;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+      }
+      .help {
+        position: fixed;
+        left: 50%;
+        bottom: 28px;
+        padding: 9px 14px;
+        color: #090b12;
+        background: #f4c95d;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 800;
+        pointer-events: none;
+        transform: translateX(-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="game" aria-label="Neon Dash demo game"></canvas>
+    <div class="hud"><span>Neon Dash</span><span id="score">Score 000</span></div>
+    <div class="help" id="help">Space / click / tap to jump</div>
+    <script>
+      const canvas = document.getElementById("game");
+      const context = canvas.getContext("2d");
+      const scoreNode = document.getElementById("score");
+      const helpNode = document.getElementById("help");
+      let width = 0;
+      let height = 0;
+      let scale = 1;
+      let lastTime = performance.now();
+      let state;
+
+      function resize() {
+        scale = Math.min(window.devicePixelRatio || 1, 2);
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = Math.floor(width * scale);
+        canvas.height = Math.floor(height * scale);
+        context.setTransform(scale, 0, 0, scale, 0, 0);
+      }
+
+      function reset() {
+        state = {
+          started: false,
+          over: false,
+          time: 0,
+          score: 0,
+          speed: 330,
+          player: { x: width * .2, y: height * .65, vy: 0, size: 42, grounded: true },
+          obstacles: [],
+          spawn: .9
+        };
+        helpNode.textContent = "Space / click / tap to jump";
+      }
+
+      function jump() {
+        if (state.over) {
+          reset();
+          state.started = true;
+          return;
+        }
+        state.started = true;
+        if (state.player.grounded) {
+          state.player.vy = -Math.min(760, height * 1.15);
+          state.player.grounded = false;
+        }
+      }
+
+      function addObstacle() {
+        const size = 30 + Math.random() * 34;
+        state.obstacles.push({
+          x: width + size,
+          y: height * .72 - size,
+          width: size,
+          height: size
+        });
+      }
+
+      function intersects(a, b) {
+        return a.x < b.x + b.width &&
+          a.x + a.size > b.x &&
+          a.y < b.y + b.height &&
+          a.y + a.size > b.y;
+      }
+
+      function update(delta) {
+        if (!state.started || state.over) return;
+        state.time += delta;
+        state.score += delta * 12;
+        state.speed = Math.min(620, 330 + state.time * 6);
+        state.spawn -= delta;
+
+        if (state.spawn <= 0) {
+          addObstacle();
+          state.spawn = Math.max(.58, 1.2 - state.time * .008) + Math.random() * .55;
+        }
+
+        const floor = height * .72 - state.player.size;
+        state.player.vy += Math.min(1900, height * 2.8) * delta;
+        state.player.y += state.player.vy * delta;
+        if (state.player.y >= floor) {
+          state.player.y = floor;
+          state.player.vy = 0;
+          state.player.grounded = true;
+        }
+
+        for (const obstacle of state.obstacles) {
+          obstacle.x -= state.speed * delta;
+          if (intersects(state.player, obstacle)) {
+            state.over = true;
+            helpNode.textContent = "Run over - press to restart";
+          }
+        }
+        state.obstacles = state.obstacles.filter((obstacle) => obstacle.x + obstacle.width > -20);
+        scoreNode.textContent = "Score " + String(Math.floor(state.score)).padStart(3, "0");
+      }
+
+      function draw() {
+        const gradient = context.createLinearGradient(0, 0, width, height);
+        gradient.addColorStop(0, "#11162a");
+        gradient.addColorStop(1, "#080a11");
+        context.fillStyle = gradient;
+        context.fillRect(0, 0, width, height);
+
+        context.save();
+        context.strokeStyle = "rgba(255,90,103,.16)";
+        context.lineWidth = 1;
+        const spacing = 56;
+        const offset = (state.time * state.speed * .2) % spacing;
+        for (let x = -spacing + offset; x < width + spacing; x += spacing) {
+          context.beginPath();
+          context.moveTo(x, 0);
+          context.lineTo(x, height);
+          context.stroke();
+        }
+        for (let y = 0; y < height; y += spacing) {
+          context.beginPath();
+          context.moveTo(0, y);
+          context.lineTo(width, y);
+          context.stroke();
+        }
+        context.restore();
+
+        const floorY = height * .72;
+        context.fillStyle = "#ff5a67";
+        context.fillRect(0, floorY, width, 5);
+        context.shadowColor = "#ff5a67";
+        context.shadowBlur = 24;
+        context.fillRect(0, floorY, width, 2);
+        context.shadowBlur = 0;
+
+        for (const obstacle of state.obstacles) {
+          context.fillStyle = "#f4c95d";
+          context.beginPath();
+          context.moveTo(obstacle.x, obstacle.y + obstacle.height);
+          context.lineTo(obstacle.x + obstacle.width / 2, obstacle.y);
+          context.lineTo(obstacle.x + obstacle.width, obstacle.y + obstacle.height);
+          context.closePath();
+          context.fill();
+        }
+
+        const player = state.player;
+        context.save();
+        context.translate(player.x + player.size / 2, player.y + player.size / 2);
+        context.rotate(state.started && !state.over ? state.time * 2.2 : 0);
+        context.shadowColor = "#51d8ff";
+        context.shadowBlur = 30;
+        context.fillStyle = state.over ? "#ff5a67" : "#51d8ff";
+        context.fillRect(-player.size / 2, -player.size / 2, player.size, player.size);
+        context.fillStyle = "#090b12";
+        context.fillRect(-player.size * .2, -player.size * .2, player.size * .4, player.size * .4);
+        context.restore();
+
+        if (!state.started) {
+          context.fillStyle = "rgba(248,246,239,.92)";
+          context.textAlign = "center";
+          context.font = "800 " + Math.max(26, Math.min(54, width * .055)) + "px Arial";
+          context.fillText("CLICK TO START", width / 2, height * .38);
+        }
+      }
+
+      function frame(now) {
+        const delta = Math.min((now - lastTime) / 1000, .032);
+        lastTime = now;
+        update(delta);
+        draw();
+        requestAnimationFrame(frame);
+      }
+
+      window.addEventListener("resize", () => { resize(); reset(); });
+      window.addEventListener("keydown", (event) => {
+        if (event.code === "Space" || event.code === "ArrowUp") {
+          event.preventDefault();
+          jump();
+        }
+      });
+      canvas.addEventListener("pointerdown", jump);
+      resize();
+      reset();
+      requestAnimationFrame(frame);
+    </script>
+  </body>
+</html>
