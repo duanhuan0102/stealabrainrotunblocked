@@ -1740,7 +1740,7 @@ h3 {
   height: var(--portal-topbar);
   align-items: center;
   padding: 0 14px;
-  grid-template-columns: 260px minmax(260px, 460px) 1fr;
+  grid-template-columns: max-content minmax(220px, 460px) 1fr;
   gap: 24px;
 }
 
@@ -1786,9 +1786,10 @@ h3 {
 }
 
 .brand__text {
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  flex: 0 0 auto;
+  min-width: max-content;
+  overflow: visible;
+  text-overflow: clip;
   white-space: nowrap;
 }
 
