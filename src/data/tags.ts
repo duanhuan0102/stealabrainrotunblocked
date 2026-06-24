@@ -20,6 +20,30 @@ export const tags: GameTag[] = [
       "Games where planning routes, timing upgrades, and choosing risks matters.",
   },
   {
+    slug: "sports",
+    name: "Sports",
+    description:
+      "Games built around matches, goals, field position, and competitive timing.",
+  },
+  {
+    slug: "soccer",
+    name: "Soccer",
+    description:
+      "Soccer and football-inspired games focused on scoring, defending, and ball control.",
+  },
+  {
+    slug: "car",
+    name: "Car",
+    description:
+      "Games where driving, vehicle control, steering, and momentum shape the action.",
+  },
+  {
+    slug: "multiplayer",
+    name: "Multiplayer",
+    description:
+      "Games with competitive or shared-arena play against other players or player-like rivals.",
+  },
+  {
     slug: "one-button",
     name: "One Button",
     description:

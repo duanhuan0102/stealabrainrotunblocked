@@ -106,6 +106,35 @@ export const categories: Category[] = [
     ],
   },
   {
+    slug: "sports",
+    name: "Sports Games",
+    description:
+      "Browser sports games built around goals, matches, vehicle control, and competitive timing.",
+    introduction:
+      "Sports games turn simple objectives into quick decisions. Chase the ball, defend space, take the right shot, and use each match to improve your timing.",
+    accent: "#27c4ff",
+    content: [
+      {
+        heading: "Fast sports games for the browser",
+        paragraphs: [
+          "A good browser sports game should make the goal clear within seconds. You need responsive controls, readable arenas, and enough pressure to make every touch or shot feel important.",
+          "This category includes games where timing, positioning, and quick recoveries matter as much as raw speed.",
+        ],
+      },
+      {
+        heading: "Win with better decisions",
+        paragraphs: [
+          "Sports games reward players who read the field before they commit. Move early, protect your goal, and attack when the lane is open instead of chasing every play at full speed.",
+        ],
+        bullets: [
+          "Keep the objective in view.",
+          "Balance offense with defense.",
+          "Use each round to learn cleaner angles.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "skill",
     name: "Skill Games",
     description:
