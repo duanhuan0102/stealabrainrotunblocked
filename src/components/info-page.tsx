@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { Breadcrumbs } from "@/src/components/breadcrumbs";
+import { siteConfig } from "@/src/config/site";
 
 interface InfoPageProps {
   title: string;
@@ -14,7 +15,7 @@ export function InfoPage({ title, description, children }: InfoPageProps) {
         <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: title }]} />
         <div className="info-page__layout">
           <header>
-            <p className="eyebrow">ArcadeForge</p>
+            <p className="eyebrow">{siteConfig.name}</p>
             <h1>{title}</h1>
             <p>{description}</p>
           </header>

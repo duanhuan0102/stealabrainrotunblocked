@@ -9,7 +9,7 @@ interface SearchPageProps {
 
 export const metadata: Metadata = {
   title: "Search Games",
-  description: "Search the template game collection.",
+  description: "Search the Steal A Brainrot Unblocked game collection.",
   robots: {
     index: false,
     follow: true,
@@ -60,7 +60,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
           ) : (
             <div className="empty-state">
               <h2>No games found</h2>
-              <p>Try a shorter keyword or browse the available template games.</p>
+              <p>Try a shorter keyword or browse the available games.</p>
             </div>
           )}
         </div>

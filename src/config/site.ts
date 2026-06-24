@@ -13,11 +13,9 @@ export const siteConfig = {
   email: "duanhuan0102@gmail.com",
   copyrightStartYear: 2026,
   navigation: [
-    { label: "New Games", href: "/new-games" },
-    { label: "Popular", href: "/popular-games" },
-    { label: "Trending", href: "/trending-games" },
+    { label: "Play Game", href: "/games/steal-a-brainrot-unblocked" },
     { label: "Action", href: "/categories/action" },
-    { label: "Puzzle", href: "/categories/puzzle" },
+    { label: "About", href: "/about" },
   ],
 } as const;
 

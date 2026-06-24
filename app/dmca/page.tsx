@@ -18,8 +18,8 @@ export default function DmcaPage() {
       <h2>Copyright notice</h2>
       <p>
         We respect intellectual property rights and respond to clear notices of
-        alleged infringement. This template is not legal advice and should be
-        reviewed for the laws that apply to your business.
+        alleged infringement. If you believe material on this site should be
+        reviewed or removed, send a complete notice with the details below.
       </p>
       <h2>Required information</h2>
       <ul>

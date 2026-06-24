@@ -13,8 +13,8 @@ export default function NotFound() {
           <Link className="button button--primary" href="/">
             Return home
           </Link>
-          <Link className="button button--ghost" href="/new-games">
-            Browse new games
+          <Link className="button button--ghost" href="/games/steal-a-brainrot-unblocked">
+            Play the game
           </Link>
         </div>
       </div>

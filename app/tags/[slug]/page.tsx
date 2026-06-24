@@ -15,7 +15,9 @@ interface TagPageProps {
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return tags.map((tag) => ({ slug: tag.slug }));
+  return tags
+    .filter((tag) => getGamesByTag(tag.slug).length > 0)
+    .map((tag) => ({ slug: tag.slug }));
 }
 
 export async function generateMetadata({

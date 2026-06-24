@@ -3,9 +3,9 @@ import { siteConfig } from "@/src/config/site";
 
 const primaryLinks = [
   { label: "Home", href: "/", icon: "PLAY" },
-  { label: "Newest", href: "/new-games", icon: "NEW" },
-  { label: "Trending", href: "/trending-games", icon: "HOT" },
-  { label: "Top Popular", href: "/popular-games", icon: "TOP" },
+  { label: "Play Game", href: "/games/steal-a-brainrot-unblocked", icon: "GAME" },
+  { label: "Action Games", href: "/categories/action", icon: "3D" },
+  { label: "Search", href: "/search", icon: "FIND" },
 ];
 
 const companyLinks = [

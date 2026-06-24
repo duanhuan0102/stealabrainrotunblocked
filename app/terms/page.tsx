@@ -13,7 +13,7 @@ export default function TermsPage() {
   return (
     <InfoPage
       title="Terms of Use"
-      description="Starter terms for the template. Review them with qualified counsel before launch."
+      description={`Terms for using ${siteConfig.name} and its browser game pages.`}
     >
       <h2>Acceptable use</h2>
       <p>
@@ -29,9 +29,9 @@ export default function TermsPage() {
       </p>
       <h2>No warranty</h2>
       <p>
-        The service is provided as available. Adapt this clause and the
-        limitation of liability to the jurisdiction and business model of the
-        final project.
+        The service is provided as available. We do not guarantee uninterrupted
+        access, error-free operation, or continued availability of third-party
+        game content.
       </p>
       <h2>Contact</h2>
       <p>

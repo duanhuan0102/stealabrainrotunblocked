@@ -6,9 +6,6 @@ import { tags } from "@/src/data/tags";
 
 const staticRoutes = [
   "",
-  "/new-games",
-  "/popular-games",
-  "/trending-games",
   "/about",
   "/contact",
   "/dmca",
@@ -17,7 +14,12 @@ const staticRoutes = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
+  const listingRoutes =
+    games.length >= 2 ? ["/new-games", "/popular-games", "/trending-games"] : [];
+  const staticEntries: MetadataRoute.Sitemap = [
+    ...staticRoutes,
+    ...listingRoutes,
+  ].map((route) => ({
     url: `${siteConfig.url}${route}`,
     lastModified: new Date("2026-06-15"),
     changeFrequency: route === "" ? "daily" : "monthly",

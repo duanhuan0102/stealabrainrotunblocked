@@ -34,11 +34,11 @@ export function SiteHeader() {
         </form>
 
         <div className="header-actions" aria-label="Quick actions">
-          <Link href="/trending-games" className="header-icon-button" aria-label="Trending games">
-            <span aria-hidden="true">T</span>
-          </Link>
-          <Link href="/popular-games" className="header-icon-button" aria-label="Popular games">
+          <Link href="/games/steal-a-brainrot-unblocked" className="header-icon-button" aria-label="Play Steal A Brainrot Unblocked">
             <span aria-hidden="true">P</span>
+          </Link>
+          <Link href="/categories/action" className="header-icon-button" aria-label="Action games">
+            <span aria-hidden="true">A</span>
           </Link>
         </div>
       </div>

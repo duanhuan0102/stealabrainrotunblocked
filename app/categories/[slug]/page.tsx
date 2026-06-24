@@ -16,7 +16,9 @@ interface CategoryPageProps {
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return categories.map((category) => ({ slug: category.slug }));
+  return categories
+    .filter((category) => getGamesByCategory(category.slug).length > 0)
+    .map((category) => ({ slug: category.slug }));
 }
 
 export async function generateMetadata({

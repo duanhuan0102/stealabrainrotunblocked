@@ -1,9 +1,13 @@
 import Link from "next/link";
 import { categories } from "@/src/data/categories";
+import { getGamesByCategory } from "@/src/data/games";
 import { siteConfig } from "@/src/config/site";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
+  const activeCategories = categories.filter(
+    (category) => getGamesByCategory(category.slug).length > 0,
+  );
 
   return (
     <footer className="site-footer">
@@ -20,15 +24,15 @@ export function SiteFooter() {
         <div>
           <h2>Discover</h2>
           <ul>
-            <li><Link href="/new-games">New Games</Link></li>
-            <li><Link href="/popular-games">Popular Games</Link></li>
-            <li><Link href="/trending-games">Trending Games</Link></li>
+            <li><Link href="/games/steal-a-brainrot-unblocked">Play Game</Link></li>
+            <li><Link href="/categories/action">Action Games</Link></li>
+            <li><Link href="/search">Search Games</Link></li>
           </ul>
         </div>
         <div>
           <h2>Categories</h2>
           <ul>
-            {categories.map((category) => (
+            {activeCategories.map((category) => (
               <li key={category.slug}>
                 <Link href={`/categories/${category.slug}`}>{category.name}</Link>
               </li>
@@ -48,11 +52,11 @@ export function SiteFooter() {
       </div>
       <div className="shell site-footer__bottom">
         <p>
-          © {siteConfig.copyrightStartYear}
-          {year > siteConfig.copyrightStartYear ? `–${year}` : ""} {siteConfig.name}.
+          &copy; {siteConfig.copyrightStartYear}
+          {year > siteConfig.copyrightStartYear ? `-${year}` : ""} {siteConfig.name}.
           All rights reserved.
         </p>
-        <p>Built as a reusable game SEO template.</p>
+        <p>Free browser game access, guides, and site policies.</p>
       </div>
     </footer>
   );
