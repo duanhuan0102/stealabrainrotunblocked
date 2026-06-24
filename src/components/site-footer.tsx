@@ -17,7 +17,7 @@ export function SiteFooter() {
             <span className="brand__mark" aria-hidden="true">
               {siteConfig.shortName}
             </span>
-            <span>{siteConfig.name}</span>
+            <span className="brand__text">{siteConfig.name}</span>
           </Link>
           <p>{siteConfig.description}</p>
         </div>

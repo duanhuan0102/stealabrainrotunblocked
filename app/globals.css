@@ -1746,6 +1746,8 @@ h3 {
 
 .brand {
   min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
   gap: 10px;
   color: var(--portal-text);
   font-family: var(--font-display);
@@ -1754,11 +1756,13 @@ h3 {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   text-shadow: 0 0 12px rgba(255, 255, 255, 0.55);
+  white-space: nowrap;
 }
 
 .brand__menu {
   display: grid;
   width: 22px;
+  flex: 0 0 auto;
   gap: 5px;
 }
 
@@ -1770,6 +1774,7 @@ h3 {
 }
 
 .brand__mark {
+  flex: 0 0 auto;
   width: 30px;
   height: 30px;
   color: #fff;
@@ -1778,6 +1783,13 @@ h3 {
   font-size: 0.7rem;
   letter-spacing: 0;
   text-shadow: none;
+}
+
+.brand__text {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .site-search {

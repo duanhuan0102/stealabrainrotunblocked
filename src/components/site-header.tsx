@@ -14,7 +14,7 @@ export function SiteHeader() {
           <span className="brand__mark" aria-hidden="true">
             {siteConfig.shortName}
           </span>
-          <span>{siteConfig.name}</span>
+          <span className="brand__text">{siteConfig.name}</span>
         </Link>
 
         <form className="site-search" role="search" action="/search">
