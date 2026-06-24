@@ -1,22 +1,22 @@
 const configuredUrl =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
-  "https://example.com";
+  "https://stealabrainrotunblocked.org";
 
 export const siteConfig = {
-  name: "ArcadeForge",
-  shortName: "AF",
+  name: "Steal A Brainrot Unblocked",
+  shortName: "SB",
   url: configuredUrl,
   description:
-    "Play carefully selected browser games online for free. Discover fresh arcade, puzzle, racing, and skill games with clear guides and no downloads.",
+    "Play Steal A Brainrot Unblocked online for free. Load the 3D browser game, learn the controls, and raid rival bases with no download.",
   locale: "en_US",
   language: "en",
-  email: "hello@example.com",
+  email: "duanhuan0102@gmail.com",
   copyrightStartYear: 2026,
   navigation: [
     { label: "New Games", href: "/new-games" },
     { label: "Popular", href: "/popular-games" },
     { label: "Trending", href: "/trending-games" },
-    { label: "Arcade", href: "/categories/arcade" },
+    { label: "Action", href: "/categories/action" },
     { label: "Puzzle", href: "/categories/puzzle" },
   ],
 } as const;

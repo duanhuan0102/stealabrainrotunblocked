@@ -41,5 +41,6 @@ export interface Game {
   plays: number;
   rating?: number;
   ratingCount?: number;
+  image?: string;
   embedUrl?: string;
 }

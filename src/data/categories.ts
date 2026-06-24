@@ -2,6 +2,35 @@ import type { Category } from "@/src/types/content";
 
 export const categories: Category[] = [
   {
+    slug: "action",
+    name: "Action Games",
+    description:
+      "Fast browser games built around movement, collecting, chasing, and quick tactical decisions.",
+    introduction:
+      "Action games keep the pressure close. Move through the arena, react to rivals, protect what you have earned, and look for the next opening before the match turns against you.",
+    accent: "#ff5a67",
+    content: [
+      {
+        heading: "What to expect from action games",
+        paragraphs: [
+          "The best action games make every route, pickup, and escape feel immediate. Controls should be readable, goals should stay visible, and short sessions should still leave room for smart decisions.",
+          "This category favors browser games with direct movement, quick restarts, and enough pressure to make each run feel different.",
+        ],
+      },
+      {
+        heading: "Play with a plan",
+        paragraphs: [
+          "Good action play is not only about speed. Watch where rivals move, choose safer routes when you are carrying something valuable, and avoid taking risks that leave your own base exposed.",
+        ],
+        bullets: [
+          "Move early instead of reacting late.",
+          "Protect valuable pickups before chasing more.",
+          "Use each failed run to learn safer routes.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "arcade",
     name: "Arcade Games",
     description:

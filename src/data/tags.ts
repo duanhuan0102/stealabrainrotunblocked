@@ -2,6 +2,24 @@ import type { GameTag } from "@/src/types/content";
 
 export const tags: GameTag[] = [
   {
+    slug: "3d",
+    name: "3D",
+    description:
+      "Browser games with 3D arenas, characters, camera movement, or spatial navigation.",
+  },
+  {
+    slug: "action",
+    name: "Action",
+    description:
+      "Fast games focused on movement, chasing, collecting, and quick reactions.",
+  },
+  {
+    slug: "strategy",
+    name: "Strategy",
+    description:
+      "Games where planning routes, timing upgrades, and choosing risks matters.",
+  },
+  {
     slug: "one-button",
     name: "One Button",
     description:

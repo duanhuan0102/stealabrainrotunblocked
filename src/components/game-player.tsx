@@ -49,7 +49,12 @@ export function GamePlayer({ game, autoStart = false }: GamePlayerProps) {
           />
         ) : (
           <>
-            <GameArtwork accent={game.accent} icon={game.icon} name={game.name} />
+            <GameArtwork
+              accent={game.accent}
+              icon={game.icon}
+              image={game.image}
+              name={game.name}
+            />
             <div className="player-shell__overlay">
               <button
                 className="play-button"

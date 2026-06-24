@@ -19,6 +19,7 @@ export function GameCard({ game }: GameCardProps) {
         <GameArtwork
           accent={game.accent}
           icon={game.icon}
+          image={game.image}
           name={game.name}
           compact
         />

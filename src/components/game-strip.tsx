@@ -20,6 +20,7 @@ export function GameStrip({ games, label }: GameStripProps) {
             <GameArtwork
               accent={game.accent}
               icon={game.icon}
+              image={game.image}
               name={game.name}
               compact
             />

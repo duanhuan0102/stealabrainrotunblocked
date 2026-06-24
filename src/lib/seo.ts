@@ -14,6 +14,7 @@ interface MetadataInput {
   description: string;
   path: string;
   type?: "website" | "article";
+  image?: string;
 }
 
 export function createMetadata({
@@ -21,6 +22,7 @@ export function createMetadata({
   description,
   path,
   type = "website",
+  image,
 }: MetadataInput): Metadata {
   const canonical = absoluteUrl(path);
 
@@ -37,11 +39,13 @@ export function createMetadata({
       siteName: siteConfig.name,
       locale: siteConfig.locale,
       type,
+      ...(image ? { images: [{ url: image, width: 1280, height: 720 }] } : {}),
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      ...(image ? { images: [image] } : {}),
     },
   };
 }

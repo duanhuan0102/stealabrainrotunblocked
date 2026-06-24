@@ -26,6 +26,7 @@ export function RightGameRail({ currentSlug, games }: RightGameRailProps) {
             <GameArtwork
               accent={game.accent}
               icon={game.icon}
+              image={game.image}
               name={game.name}
               compact
             />
