@@ -6,6 +6,7 @@ import { SiteHeader } from "@/src/components/site-header";
 import { AppSidebar } from "@/src/components/app-sidebar";
 
 const googleAnalyticsId = "G-K75F990DC1";
+const googleAdsensePublisherId = "ca-pub-9312526768476152";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -73,6 +74,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={siteConfig.language}>
+      <head>
+        <script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${googleAdsensePublisherId}`}
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
