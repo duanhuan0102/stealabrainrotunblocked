@@ -158,6 +158,89 @@ export const games: Game[] = [
     image: "/images/games/rocket-goal-cover.webp",
     embedUrl: "https://rocketgoal.io/",
   },
+  {
+    slug: "core-ball",
+    name: "Core Ball",
+    tagline:
+      "Launch balls into a spinning core and master each one-button timing puzzle.",
+    description:
+      "Play Core Ball online for free. This Coreball timing game challenges you to launch every ball into the rotating core without colliding.",
+    instructions: [
+      "Click or tap inside the game frame to launch the next numbered ball.",
+      "Aim for open gaps around the spinning core.",
+      "Avoid every ball already attached to the core or the level restarts.",
+      "Clear the full queue of balls to move into the next stage.",
+      "Wait for the rotation rhythm instead of firing every shot immediately.",
+    ],
+    content: [
+      {
+        heading: "Play Core Ball online",
+        paragraphs: [
+          "Core Ball is a one-button skill game about timing, patience, and reading rotation. The rule is simple: send every numbered ball into the spinning core without touching any ball that is already attached. Each successful shot changes the next opening, which gives the Core Ball game its sharp arcade feel.",
+          "This Core Ball online version runs from a local HTML5 build hosted inside this site. The game loads in the browser from the same domain, so there is no external game portal to wait on and no download to install. Open the player, click or tap to shoot, and focus on placing each ball into a clean gap.",
+        ],
+      },
+      {
+        heading: "How the Core Ball game works",
+        paragraphs: [
+          "Each stage begins with a rotating center and a stack of balls waiting below it. When you click, the next ball travels upward and locks onto the edge of the core if the space is open. If that shot touches another ball, the level fails and restarts. The goal is not to shoot quickly; the goal is to shoot when the rotation gives you enough room.",
+          "As the levels continue, the queue grows and the safe spaces become harder to judge. A wide opening can turn into a narrow lane after only a few shots. That is why Core Ball feels easy to understand but difficult to master: every small timing decision changes the next one.",
+        ],
+        bullets: [
+          "Watch one full turn before taking a risky shot.",
+          "Use the largest gaps early while the core is less crowded.",
+          "Slow down near the final balls, because one collision resets the stage.",
+        ],
+      },
+      {
+        heading: "Core Ball strategy and timing tips",
+        paragraphs: [
+          "Good Core Ball strategy starts with rhythm. The core turns at a steady speed, so a missed shot usually comes from clicking too early or too late for the gap you were tracking. Pick one opening, follow it for a moment, and fire when it lines up with the launch path.",
+          "The safest approach is to place early balls where they create balanced spacing. Do not crowd one side of the core unless the level gives you no other option. Balanced spacing keeps more usable lanes available for the final shots, where most players lose a strong run.",
+        ],
+        bullets: [
+          "Track a single gap instead of watching every ball at once.",
+          "Avoid double-clicking when the remaining queue is short.",
+          "Treat the last two or three shots as precision moves, not quick taps.",
+        ],
+      },
+      {
+        heading: "Why Core Ball unblocked works for quick sessions",
+        paragraphs: [
+          "Players searching for Core Ball unblocked usually want a fast browser game that opens directly and makes sense within seconds. Coreball fits that intent because there are no long tutorials, menus, or complicated upgrades. The challenge is visible immediately: a core, a stack of balls, and one input that decides whether the level continues.",
+          "That makes Core Ball a strong pick for short breaks, classroom-style browser play, or a quick skill test. Each attempt is brief, but the game still creates the feeling that the next run will be cleaner. You can practice one level for better timing, push for a higher stage, or play a few rounds when you want a focused arcade challenge.",
+        ],
+      },
+      {
+        heading: "Controls and device support",
+        paragraphs: [
+          "Core Ball is built for desktop, mobile, and tablet browsers. On desktop, use a mouse click or trackpad click inside the player. On phones and tablets, tap the screen to launch the next ball. Because the game only needs one input, it is easy to start on touch screens, but keep your finger away from the center so you can see the gaps.",
+          "The local HTML5 build is lightweight compared with large 3D WebGL games, so it should load quickly on modern browsers. If the game does not respond after the page opens, click or tap once inside the iframe to focus it, then wait a moment for the script and styles to finish loading.",
+        ],
+      },
+      {
+        heading: "What makes Core Ball replayable",
+        paragraphs: [
+          "Core Ball keeps its replay value by making failure readable. When a shot collides, you can usually tell whether you rushed, hesitated, or aimed at the wrong opening. That immediate feedback makes the next attempt more useful because you are improving the same timing skill one shot at a time.",
+          "The best way to improve is to stay calm when the core becomes crowded. Many players clear the early queue easily, then lose focus when only a few balls remain. Pause for the rotation, choose the cleanest lane, and make the final launch with the same patience you used at the start. That steady rhythm is the heart of the Core Ball game.",
+        ],
+      },
+    ],
+    category: "skill",
+    tags: ["one-button", "high-score", "mobile", "strategy"],
+    accent: "#f4c95d",
+    icon: "C",
+    developer: "Own Project",
+    technology: "HTML5 CSS JavaScript",
+    platforms: ["Desktop", "Mobile", "Tablet"],
+    publishedAt: "2026-06-25",
+    updatedAt: "2026-06-25",
+    featured: true,
+    trending: true,
+    plays: 34200,
+    image: "/images/games/core-ball-cover.webp",
+    embedUrl: "/embed/core-ball/index.html",
+  },
 ];
 
 export function getGameBySlug(slug: string) {
