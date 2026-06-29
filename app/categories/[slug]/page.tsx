@@ -5,6 +5,7 @@ import { Breadcrumbs } from "@/src/components/breadcrumbs";
 import { ContentSections } from "@/src/components/content-sections";
 import { GameGrid } from "@/src/components/game-grid";
 import { JsonLd } from "@/src/components/json-ld";
+import { seoConfig } from "@/src/config/site";
 import { categories, getCategoryBySlug } from "@/src/data/categories";
 import { getGamesByCategory } from "@/src/data/games";
 import { absoluteUrl, createMetadata } from "@/src/lib/seo";
@@ -38,7 +39,7 @@ export async function generateMetadata({
     path: `/categories/${category.slug}`,
   });
 
-  if (categoryGames.length === 0) {
+  if (categoryGames.length < seoConfig.minGamesForIndexableTag) {
     metadata.robots = {
       index: false,
       follow: true,

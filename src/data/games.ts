@@ -241,6 +241,94 @@ export const games: Game[] = [
     image: "/images/games/core-ball-cover.webp",
     embedUrl: "/embed/core-ball/index.html",
   },
+  {
+    slug: "acceleration-city",
+    name: "Acceleration City",
+    tagline:
+      "Explore a neon city, tune futuristic rides, and use CoBot tools to solve open-world driving challenges.",
+    description:
+      "Play Acceleration City online for free. Drive a 3D car game world, explore the city map, use CoBot tools, and practice STEM coding challenges.",
+    instructions: [
+      "Click inside the player and press Play now if the external embed shows its loading screen.",
+      "Use WASD or the arrow keys to steer, accelerate, and control your vehicle through the city.",
+      "Press Spacebar for handbrake, drift, action, or jump moments when the game calls for it.",
+      "Use Left Shift for nitro boost, and press R if you need to reset your position.",
+      "Experiment with CoBot triggers and vehicle upgrades to reach new routes, platforms, and collectibles.",
+    ],
+    content: [
+      {
+        heading: "Play Acceleration City online",
+        paragraphs: [
+          "The Acceleration City car game is a browser-based 3D driving adventure set inside a bright futuristic city. Instead of locking you to one racing lane, it gives you room to explore roads, ramps, rooftops, desert paths, and neon districts while you learn how speed and control change each route.",
+          "This Acceleration City page uses the external FreeWebGames embed, so there is no local HTML game package stored in this project. Open the player, let the iframe finish loading, and play Acceleration City online from the browser. If you are looking for an Acceleration City download, this page is built for browser play instead of APK or EXE files.",
+        ],
+      },
+      {
+        heading: "Open-world driving and vehicle upgrades",
+        paragraphs: [
+          "Acceleration City gameplay mixes open-world exploration with acceleration game timing. Cruise through the city to learn the layout, then push harder when a straight road or clean ramp gives you space to build speed. The fun comes from deciding when to drive carefully and when to use the full power of your ride.",
+          "Acceleration City also lets you change the way your vehicle feels. Cars, bikes, trucks, and hovercraft-style rides all support the fantasy of building a better machine for the Acceleration City map in front of you. Upgrades make each run feel more personal, especially when you choose routes based on handling, drift control, and boost timing.",
+        ],
+        bullets: [
+          "Explore wide city roads before chasing difficult jumps.",
+          "Use boost on straight sections where you can recover safely.",
+          "Try different vehicles when a route feels too tight or too heavy.",
+        ],
+      },
+      {
+        heading: "CoBot, STEM, and Hour of Code appeal",
+        paragraphs: [
+          "One reason players search for Acceleration City Hour of Code, CS2N Acceleration City, Acceleration City CS-STEM Network, or Acceleration City coding is the CoBot system. CoBot acts like a programmable helper that can support movement, build platforms, or trigger a boost when the setup is right.",
+          "You do not need advanced programming experience to enjoy the Acceleration City game. The STEM layer works best when you treat it as experimentation: test a trigger, watch how the result changes your path, and adjust the next attempt. That makes the game approachable for classroom play, coding clubs, robotics fans, and players who like smart driving challenges.",
+        ],
+      },
+      {
+        heading: "Acceleration City controls and device support",
+        paragraphs: [
+          "Acceleration City controls are built around keyboard driving. Use WASD or the arrow keys to accelerate and steer, press Spacebar for handbrake, drift, action, or jump behavior, tap Left Shift for nitro boost, and use R to reset after a bad landing. If the frame does not respond, click inside the game once so the browser focuses the iframe.",
+          "Desktop Chrome or another modern desktop browser is the safest choice because Acceleration City uses a full 3D web app inside an external iframe. Can you play Acceleration City on iPad? Tablet browsers may load it, but touch controls and network filters can change the experience. Rotate to landscape and wait for the embedded game to finish loading before judging performance.",
+        ],
+        bullets: [
+          "Desktop keyboard play gives the cleanest steering and boost control.",
+          "Tablet and iPad play may work better in landscape orientation.",
+          "Restricted school or public networks can block the external iframe even when this page loads.",
+        ],
+      },
+      {
+        heading: "Acceleration City walkthrough tips",
+        paragraphs: [
+          "Start your first Acceleration City walkthrough like a map tour rather than a speedrun. Follow visible roads, learn where ramps and rooftops connect, and use reset when an experimental jump sends you into a bad position. Once you know a few reliable routes, begin adding boost and drift to cut time without losing control.",
+          "If you are hunting Minanimals or trying to reach a difficult platform, slow down before the final approach. Full speed feels exciting, but a clean angle usually matters more than raw acceleration. Use CoBot tools near obstacles, keep the camera pointed toward the next landing, and repeat short sections until the route feels predictable.",
+        ],
+        bullets: [
+          "Practice one district before jumping across the whole map.",
+          "Save nitro for exits, ramps, and long roads instead of crowded turns.",
+          "Use CoBot experiments to solve routes that normal driving cannot reach.",
+        ],
+      },
+      {
+        heading: "Browser access and classroom notes",
+        paragraphs: [
+          "Many players search for Acceleration City because they want the full browser version on a classroom device, Chromebook-style setup, or shared computer. This page keeps the game frame close to the guide, explains the controls clearly, and avoids sending players through unrelated downloads.",
+          "Access can still depend on the network. The playable frame comes from FreeWebGames and then loads the Acceleration City activity from CS2N, so a firewall or browser policy can block one part of the chain. If that happens, try refreshing once, use a modern browser, or return from a less restricted connection.",
+        ],
+      },
+    ],
+    category: "racing",
+    tags: ["3d", "car", "racing", "adventure", "educational", "coding", "mobile"],
+    accent: "#20c7d8",
+    icon: "A",
+    developer: "FreeWebGames",
+    technology: "HTML5 iframe",
+    platforms: ["Desktop", "Tablet", "Mobile"],
+    publishedAt: "2026-06-29",
+    updatedAt: "2026-06-29",
+    featured: true,
+    trending: true,
+    plays: 38600,
+    image: "/images/games/acceleration-city-cover.webp",
+    embedUrl: "https://freewebgames.io/acceleration-city.embed",
+  },
 ];
 
 export function getGameBySlug(slug: string) {

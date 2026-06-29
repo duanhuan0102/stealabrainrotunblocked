@@ -34,7 +34,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const categoryEntries: MetadataRoute.Sitemap = categories
-    .filter((category) => getGamesByCategory(category.slug).length > 0)
+    .filter(
+      (category) =>
+        getGamesByCategory(category.slug).length >=
+        seoConfig.minGamesForIndexableTag,
+    )
     .map((category) => ({
       url: `${siteConfig.url}/categories/${category.slug}`,
       lastModified: new Date("2026-06-15"),

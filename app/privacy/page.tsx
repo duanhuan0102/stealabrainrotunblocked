@@ -5,7 +5,7 @@ import { createMetadata } from "@/src/lib/seo";
 
 export const metadata: Metadata = createMetadata({
   title: "Privacy Policy",
-  description: `Read the ${siteConfig.name} privacy policy and learn how site data may be processed.`,
+  description: `Read the ${siteConfig.name} privacy policy for analytics, advertising, cookies, and third-party game embeds.`,
   path: "/privacy",
 });
 
@@ -13,20 +13,29 @@ export default function PrivacyPage() {
   return (
     <InfoPage
       title="Privacy Policy"
-      description="A starter privacy policy that must be adapted to the services used by the final site."
+      description={`How ${siteConfig.name} handles analytics, advertising, cookies, and third-party game embeds.`}
     >
-      <h2>Information collected</h2>
+      <h2>Information we process</h2>
       <p>
-        The production site may process basic request information, device data,
-        analytics events, and information that visitors submit directly. Update
-        this section to name every analytics, advertising, consent, and support
-        provider you actually use.
+        We may process basic technical information such as browser type, device
+        type, approximate location, referring pages, pages viewed, and gameplay
+        page interactions. If you contact us by email, we also process the
+        information you choose to include in that message.
       </p>
-      <h2>Cookies and local storage</h2>
+      <h2>Analytics and advertising</h2>
       <p>
-        Cookies or browser storage may be used for preferences, analytics,
-        security, and advertising. Obtain consent where required and provide a
-        way to revisit those choices.
+        This site uses Google Analytics to understand aggregate traffic and
+        improve game pages. It may also use Google AdSense to display ads.
+        Google and its partners may use cookies or similar technologies to
+        measure ad performance, prevent abuse, and personalize ads where
+        permitted by law.
+      </p>
+      <h2>Cookies, storage, and third-party games</h2>
+      <p>
+        Cookies, local storage, or similar browser technologies may be used for
+        analytics, advertising, security, and basic site functionality. Some
+        games are loaded through third-party iframes, and those providers may
+        process data under their own privacy policies when the game frame loads.
       </p>
       <h2>Data rights</h2>
       <p>
@@ -36,8 +45,9 @@ export default function PrivacyPage() {
       </p>
       <h2>Policy updates</h2>
       <p>
-        Publish a visible effective date and update this page whenever data
-        practices or service providers change.
+        We may update this policy when site features, advertising services,
+        analytics providers, or legal requirements change. The latest version
+        will remain available on this page.
       </p>
     </InfoPage>
   );

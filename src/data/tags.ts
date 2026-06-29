@@ -38,6 +38,30 @@ export const tags: GameTag[] = [
       "Games where driving, vehicle control, steering, and momentum shape the action.",
   },
   {
+    slug: "racing",
+    name: "Racing",
+    description:
+      "Vehicle games focused on speed, clean lines, acceleration, and city or track driving.",
+  },
+  {
+    slug: "adventure",
+    name: "Adventure",
+    description:
+      "Games built around exploration, discovery, open paths, and objective-driven journeys.",
+  },
+  {
+    slug: "educational",
+    name: "Educational",
+    description:
+      "Browser games that introduce learning goals through play, practice, and experimentation.",
+  },
+  {
+    slug: "coding",
+    name: "Coding",
+    description:
+      "Games that include programming ideas, logic triggers, automation, or STEM problem solving.",
+  },
+  {
     slug: "multiplayer",
     name: "Multiplayer",
     description:
