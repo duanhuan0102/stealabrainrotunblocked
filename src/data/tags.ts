@@ -74,6 +74,24 @@ export const tags: GameTag[] = [
       "Simple controls with challenges built around timing and precision.",
   },
   {
+    slug: "clicker",
+    name: "Clicker",
+    description:
+      "Games where repeated clicks, taps, upgrades, and simple resource loops drive progress.",
+  },
+  {
+    slug: "idle",
+    name: "Idle",
+    description:
+      "Incremental games that keep progress moving through upgrades, generators, and passive rewards.",
+  },
+  {
+    slug: "incremental",
+    name: "Incremental",
+    description:
+      "Progression games built around growing numbers, better upgrades, and compounding efficiency.",
+  },
+  {
     slug: "rhythm",
     name: "Rhythm",
     description:

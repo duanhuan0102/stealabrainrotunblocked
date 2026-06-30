@@ -36,6 +36,8 @@ export async function generateMetadata({
     title:
       game.slug === "steal-a-brainrot-unblocked"
         ? "Steal A Brainrot Game Unblocked - Play 3D Online"
+        : game.slug === "bear-clicker"
+          ? "Bear Clicker Online - Play Free"
         : `${game.name} - Play Online Free`,
     description: game.description,
     path: `/games/${game.slug}`,

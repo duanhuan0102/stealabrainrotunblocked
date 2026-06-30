@@ -70,7 +70,7 @@ export function GameOverview({ game }: GameOverviewProps) {
       </div>
 
       <div className="game-overview__copy">
-        <h2>Introduction</h2>
+        <h2>{game.name} overview</h2>
         <p>{game.description}</p>
         <h3>How to play</h3>
         <ul>
