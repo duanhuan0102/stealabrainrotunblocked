@@ -20,7 +20,7 @@ export function GamePlayer({ game, autoStart = false }: GamePlayerProps) {
             <span className="integration-placeholder__icon" aria-hidden="true">
               {game.icon}
             </span>
-            <h2>Player integration ready</h2>
+            <div className="integration-placeholder__title">Player integration ready</div>
             <p>
               Add the game URL to the <code>embedUrl</code> field in{" "}
               <code>src/data/games.ts</code>. The player will load here as soon
@@ -114,7 +114,7 @@ function PlayerToolbar({ game }: { game: Game }) {
 
   return (
     <div className="player-toolbar">
-      <h2>{game.name}</h2>
+      <span className="player-toolbar__title">{game.name}</span>
       <div className="player-toolbar__actions" aria-label="Game actions">
         {status ? <span className="player-toolbar__status">{status}</span> : null}
         <button type="button" aria-label="Like game" onClick={() => setLikes((count) => count + 1)}>

@@ -971,9 +971,12 @@ h3 {
   font-size: 2.8rem;
 }
 
-.integration-placeholder h2 {
+.integration-placeholder__title {
   margin-bottom: 18px;
   font-size: clamp(2rem, 5vw, 3.5rem);
+  font-family: var(--font-display);
+  font-weight: 900;
+  line-height: 1.05;
 }
 
 .integration-placeholder p {
@@ -2026,7 +2029,7 @@ h3 {
   background: #24263a;
 }
 
-.player-toolbar h2 {
+.player-toolbar__title {
   margin: 0;
   overflow: hidden;
   font-size: 1.25rem;

@@ -38,6 +38,8 @@ export async function generateMetadata({
         ? "Steal A Brainrot Game Unblocked - Play 3D Online"
         : game.slug === "bear-clicker"
           ? "Bear Clicker Online - Play Free"
+        : game.slug === "football-bros"
+          ? "Football Bros Game Online - Play Free"
         : `${game.name} - Play Online Free`,
     description: game.description,
     path: `/games/${game.slug}`,

@@ -26,6 +26,12 @@ export const tags: GameTag[] = [
       "Games built around matches, goals, field position, and competitive timing.",
   },
   {
+    slug: "football",
+    name: "Football",
+    description:
+      "American football games focused on running, passing, tackling, and scoring touchdowns.",
+  },
+  {
     slug: "soccer",
     name: "Soccer",
     description:

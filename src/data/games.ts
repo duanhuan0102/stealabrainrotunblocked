@@ -410,6 +410,94 @@ export const games: Game[] = [
     image: "/images/games/bear-clicker-cover.webp",
     embedUrl: "https://ozogames.com/uploads/games/html5/B/bear%20clicker/index.html",
   },
+  {
+    slug: "football-bros",
+    name: "Football Bros",
+    tagline:
+      "Break tackles, throw quick passes, and score arcade touchdowns in a fast pixel football game.",
+    description:
+      "Play Football Bros game online for free. Run, pass, tackle, and score touchdowns in a fast pixel American football game with simple keyboard controls.",
+    instructions: [
+      "Click inside the game frame and press Play Now if the OzGames embed shows its loader.",
+      "Use WASD or the arrow keys to move your player around the field.",
+      "Press Spacebar to throw when you have the ball or tackle when you are on defense.",
+      "Keep moving to find open lanes, pass to teammates, and chase down the ball carrier.",
+      "Try local two-player mode from the game menu when you want to compete on the same keyboard.",
+    ],
+    content: [
+      {
+        heading: "Play Football Bros game online",
+        paragraphs: [
+          "Football Bros is a fast American football arcade game built around simple movement, quick throws, hard tackles, and short matches that get to the point quickly. The look is bright and retro, but the field decisions still matter: you need to read space, protect the ball, and turn one open lane into a touchdown before the defense closes in.",
+          "This Football Bros free online page uses the public OzGames embed, so there is no local game package stored here and this site is not the Football Bros official site. Open the player, wait for the iframe loader, and play the Football Bros game directly in the browser without downloading a file.",
+        ],
+      },
+      {
+        heading: "What kind of football game is Football Bros?",
+        paragraphs: [
+          "Football Bros is not a full simulation with playbooks, substitutions, and long quarters. It is closer to a compact sports brawler where each snap asks for one clear decision: run, pass, dodge, or tackle. That makes it easy for new players to understand while still leaving room for better timing and smarter field position.",
+          "The source page lists Football Bros as a pixel-style sports game from Blue Wizard Digital, which also answers common 'who made Football Bros game' searches. Players searching for football bros io, football bros game online, football bros gameplay, or football bros free usually want the same browser version: arcade football, readable controls, and a match that starts quickly.",
+        ],
+        bullets: [
+          "Pixel-style American football with bright arcade presentation.",
+          "Simple keyboard controls for movement, passing, and tackling.",
+          "Fast matches that fit short browser play sessions.",
+        ],
+      },
+      {
+        heading: "Football Bros controls and first match tips",
+        paragraphs: [
+          "The main Football Bros controls are intentionally direct. Use WASD or the arrow keys to move your player, then use Spacebar as the action button. On offense, Spacebar lets you throw the ball when a teammate has space. On defense, the same button becomes your tackle input when the ball carrier is in range.",
+          "Your first match should be about learning rhythm instead of forcing every play. Keep your player moving, look for a teammate crossing into open space, and pass before the defender reaches you. When you are defending, do not chase randomly. Cut off the likely route, then tackle when the carrier has fewer directions to escape.",
+        ],
+        bullets: [
+          "Move before the pass so you are not waiting in a covered lane.",
+          "Use short passes when the defense is close.",
+          "On defense, aim your tackle at the runner's path, not where the runner used to be.",
+        ],
+      },
+      {
+        heading: "Football Bros unblocked and embed notes",
+        paragraphs: [
+          "Many players search for Football Bros unblocked because they want a football game that can open quickly from a school Chromebook, shared desktop, or casual browser session. This page is built for that intent, but access can still depend on the network. The game itself loads from OzGames, and a firewall can block the external iframe even when this site loads normally.",
+          "Technically, the embed is suitable because the provided Football Bros iframe returns 200, has no redirect, and does not send frame-blocking headers such as X-Frame-Options or restrictive frame-ancestors. There is no Football Bros GitHub package in this project; the actual game loads through the OzGames embed wrapper, which is safer than hotlinking the internal game path.",
+        ],
+      },
+      {
+        heading: "How to score more touchdowns",
+        paragraphs: [
+          "Good Football Bros offense starts with spacing. If you run straight into the nearest defender, the play ends quickly. Move diagonally, force the defender to turn, and use a pass when a teammate has a cleaner route. A safe five-yard gain is often better than a rushed throw into traffic.",
+          "When you are close to the end zone, patience becomes more valuable. Let the defense commit, then cut into the open lane or throw to the teammate who has the best angle. The best team in Football Bros is usually the one you control well, so practice timing before worrying too much about menu choices or team names.",
+        ],
+        bullets: [
+          "Pass before pressure reaches the ball carrier.",
+          "Use diagonal movement to make tackles harder to line up.",
+          "Choose the safest open lane near the goal line instead of forcing a highlight play.",
+        ],
+      },
+      {
+        heading: "Devices, two-player play, and browser performance",
+        paragraphs: [
+          "Football Bros works best on desktop because keyboard movement and the Spacebar action are central to the game. The embed includes mobile-friendly page settings, so phones and tablets may load the player, but a physical keyboard or laptop-style setup gives cleaner control for running routes, throwing passes, and tackling on time.",
+          "The game also includes local two-player appeal for players who want to compete with a friend on the same computer. If the player appears blank, click inside the frame, wait for the OzGames loader, and refresh once if a public or school network interrupts the third-party game assets.",
+        ],
+      },
+    ],
+    category: "sports",
+    tags: ["sports", "football", "action", "multiplayer", "mobile"],
+    accent: "#2fc46d",
+    icon: "F",
+    developer: "Blue Wizard Digital",
+    technology: "HTML5 WebGL iframe",
+    platforms: ["Desktop", "Tablet", "Mobile"],
+    publishedAt: "2026-07-01",
+    updatedAt: "2026-07-01",
+    featured: true,
+    trending: true,
+    plays: 52400,
+    image: "/images/games/football-bros-cover.webp",
+    embedUrl: "https://ozgames.io/football-bros.embed",
+  },
 ];
 
 export function getGameBySlug(slug: string) {
