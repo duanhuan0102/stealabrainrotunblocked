@@ -498,6 +498,89 @@ export const games: Game[] = [
     image: "/images/games/football-bros-cover.webp",
     embedUrl: "https://ozgames.io/football-bros.embed",
   },
+  {
+    slug: "bit-planes",
+    name: "Bit Planes",
+    tagline:
+      "Fly tiny planes, dodge incoming fire, and win fast browser dogfights across multiple modes.",
+    description:
+      "Play Bit Planes online for free. Fly retro planes, fire guns and missiles, eject when needed, and battle in deathmatch, teams, duel, survival, and split-screen modes.",
+    instructions: [
+      "Click inside the game frame, enter a nickname if you want, choose a mode, and press Start.",
+      "Use the Up and Down arrow keys to adjust thrust level.",
+      "Use the Left and Right arrow keys to control the elevator and steer your plane through the sky.",
+      "Press Spacebar to fire the gun, X to launch a missile, and C to catapult or parachute.",
+      "For split-screen duel, use the on-page Player 1 and Player 2 key layouts shown by the game.",
+    ],
+    content: [
+      {
+        heading: "Play Bit Planes online",
+        paragraphs: [
+          "Bit Planes is a fast HTML5 air combat game from medv.io where small planes turn simple keyboard inputs into tense dogfights. You manage thrust, angle the elevator, fire the gun, launch missiles, and try to stay in the air long enough to outplay the other pilots.",
+          "This Bit Planes page uses the public medv.io browser version in an iframe, so there is no download, APK, or local game package stored in this project. Open the player, let the canvas load, click inside the frame, and start a Bit Planes game online from the browser.",
+        ],
+      },
+      {
+        heading: "What kind of game is Bit Planes?",
+        paragraphs: [
+          "Bit Planes feels like a retro arcade dogfight game with modern browser convenience. The planes are small, the rules are readable, and the challenge comes from momentum, timing, and quick reactions rather than complicated menus. A clean turn can save you from a missile, while a rushed climb can leave your plane exposed.",
+          "The source page includes several game modes: Death match, Teams, Duel, Survival, Swarm, Domination, Revenge, and a split-screen Duel option. That variety makes Bit Planes useful for quick solo practice, online multiplayer-style fights, and local versus play when two players want to share one keyboard.",
+        ],
+        bullets: [
+          "Death match and Duel focus on direct air combat.",
+          "Teams, Swarm, and Domination add larger fight objectives.",
+          "Survival rewards steady control while pressure builds.",
+        ],
+      },
+      {
+        heading: "Bit Planes controls and first-flight tips",
+        paragraphs: [
+          "The most important Bit Planes control is not the fire button; it is thrust management. Use the Up and Down arrows to control speed, then use Left and Right to shape your climb, dive, or turn. If you keep full thrust all the time, your plane can overshoot targets or drift into danger before you can line up a shot.",
+          "Spacebar fires the gun, X deploys a missile, and C lets you catapult or parachute when the situation calls for it. New players should practice smooth turns before chasing every enemy. Stay level long enough to understand how your plane responds, then add short bursts of attack when a rival crosses your path.",
+        ],
+        bullets: [
+          "Make small elevator adjustments instead of holding a turn too long.",
+          "Fire when your nose is lined up, not when the target is already passing behind you.",
+          "Save missiles for moments when the opponent has fewer escape angles.",
+        ],
+      },
+      {
+        heading: "How to win more Bit Planes dogfights",
+        paragraphs: [
+          "Good Bit Planes gameplay is about positioning before shooting. Try to enter a fight with enough speed to climb or escape, but not so much speed that you cannot correct your line. When another plane turns below you, a controlled dive can create a better attack angle than chasing from behind at the same height.",
+          "Do not ignore survival tools. The catapult and parachute control can matter when a plane is damaged or when a risky attack leaves you without a clean recovery path. Treat each crash as feedback: if you lost control during a climb, reduce thrust earlier; if you missed every shot, start the next pass from a wider angle.",
+        ],
+      },
+      {
+        heading: "Split screen, multiplayer, and device support",
+        paragraphs: [
+          "Bit Planes supports a split-screen duel mode with separate keyboard layouts. Player 1 uses the arrow keys plus M for catapult and comma or period for fire. Player 2 uses WASD for flight, C for catapult, and V or B for fire. Because both players need reliable keyboard access, desktop and Chromebook-style setups are the best fit.",
+          "The game page uses responsive HTML and canvas elements, but Bit Planes is primarily a keyboard flying game. Tablets may load the page if a keyboard is available, while phones are less ideal because the listed controls depend on physical keys. For the smoothest Bit Planes online experience, use a modern desktop browser and click inside the iframe before playing.",
+        ],
+      },
+      {
+        heading: "Unblocked access and official source notes",
+        paragraphs: [
+          "Players often search for Bit Planes unblocked, Bit Planes game online, Bit Planes controls, or medv io Bit Planes because they want the original browser game to open without extra installers. This page links the playable frame to the official medv.io address and keeps the guide focused on real controls, real modes, and practical tips.",
+          "Access can still depend on the network. The medv.io page currently returns a normal 200 response and does not send common iframe-blocking headers, which makes it suitable for this site player. If a school, work, or public network blocks the frame later, use the official source link from a less restricted connection rather than looking for hacked or modified copies.",
+        ],
+      },
+    ],
+    category: "action",
+    tags: ["action", "flying", "shooter", "multiplayer", "retro", "physics"],
+    accent: "#4aa7ff",
+    icon: "P",
+    developer: "medv.io",
+    technology: "HTML5 Canvas iframe",
+    platforms: ["Desktop", "Tablet with keyboard", "Chromebook"],
+    publishedAt: "2026-07-02",
+    updatedAt: "2026-07-02",
+    featured: true,
+    trending: true,
+    plays: 58600,
+    image: "/images/games/bit-planes-cover.webp",
+    embedUrl: "https://medv.io/bit-planes/",
+  },
 ];
 
 export function getGameBySlug(slug: string) {

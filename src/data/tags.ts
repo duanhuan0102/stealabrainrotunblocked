@@ -134,6 +134,24 @@ export const tags: GameTag[] = [
       "Score-chasing games designed for repeated runs and steady improvement.",
   },
   {
+    slug: "flying",
+    name: "Flying",
+    description:
+      "Games where aircraft movement, altitude control, and aerial positioning shape each round.",
+  },
+  {
+    slug: "shooter",
+    name: "Shooter",
+    description:
+      "Games focused on aiming, firing, dodging projectiles, and surviving combat pressure.",
+  },
+  {
+    slug: "retro",
+    name: "Retro",
+    description:
+      "Games with classic arcade pacing, pixel-inspired visuals, or old-school browser game style.",
+  },
+  {
     slug: "mobile",
     name: "Mobile Friendly",
     description:
