@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { AdSlot } from "@/src/components/ad-slot";
 import { ArcadeLayout } from "@/src/components/arcade-layout";
 import { ContentSections } from "@/src/components/content-sections";
@@ -24,20 +25,20 @@ const homepageSections: ContentSection[] = [
   {
     heading: "Play Steal A Brainrot Unblocked online",
     paragraphs: [
-      "Steal A Brainrot Unblocked is the main game this page is built around. Load the 3D arena, move through rival bases, steal brainrots, and bring them back before another player interrupts your run.",
-      "This homepage is the direct access point for players who want to play Steal A Brainrot Unblocked online for free with no download. The embedded game loads in the browser and keeps the focus on fast entry, clear controls, and practical tips.",
+      "Steal A Brainrot Unblocked is the featured game on this site, with quick access to the 3D arena, practical controls, and related browser games from the same hub.",
+      "Use this homepage to start with the featured game, then explore more free online games, guides, and no-download play pages as the library grows.",
     ],
   },
   {
-    heading: "Why players search for Steal A Brainrot Unblocked",
+    heading: "A simple hub for browser games",
     paragraphs: [
-      "Most players looking for Steal A Brainrot Unblocked want a page that opens fast, explains the controls, and keeps the game one click away. This page is organized around that unblocked game intent instead of sending you through extra menus.",
-      "If the external game frame is blocked by a school, work, or public network, refresh once, try another browser, or return from a different connection. The Steal A Brainrot Unblocked game itself is served from an external Unity WebGL source.",
+      "The site is organized around fast browser access, clear controls, and short guides for games that can be played without installing a separate app.",
+      "If an external game frame is blocked by a school, work, or public network, refresh once, try another browser, or return from a different connection.",
     ],
     bullets: [
-      "Free online access to Steal A Brainrot Unblocked through the browser.",
-      "3D action gameplay with stealing, escaping, and base defense.",
-      "No local install or download required.",
+      "Featured access to Steal A Brainrot Unblocked.",
+      "More free browser games added around similar quick-play sessions.",
+      "Guides, controls, and device notes kept close to each game.",
     ],
   },
   {
@@ -53,10 +54,10 @@ const homepageSections: ContentSection[] = [
     ],
   },
   {
-    heading: "Best way to use this Steal A Brainrot Unblocked page",
+    heading: "Best way to use this game hub",
     paragraphs: [
-      "Use this page as your Steal A Brainrot Unblocked start page. The player is placed at the top, the most important controls are explained below it, and the FAQ covers the common loading problems that happen with browser embeds.",
-      "Because the game runs through an external Unity WebGL iframe, loading speed can depend on the browser, network, and device. Desktop browsers usually give the smoothest experience, while mobile play may take longer to start on older phones or tablets.",
+      "Use the homepage as a starting point for the featured game and the rest of the site. The player stays close to the top, while guides, FAQ content, and related games help visitors choose where to go next.",
+      "Because browser games can run through external WebGL or HTML5 embeds, loading speed can depend on the browser, network, and device. Desktop browsers usually give the smoothest experience, while mobile play may take longer to start on older phones or tablets.",
     ],
   },
   {
@@ -69,9 +70,9 @@ const homepageSections: ContentSection[] = [
 ];
 
 export const metadata: Metadata = createMetadata({
-  title: "Steal A Brainrot Unblocked - Play Online Free",
+  title: "Steal A Brainrot Unblocked - Free Browser Games Hub",
   description:
-    "Play Steal A Brainrot Unblocked online for free. Raid rival bases, steal brainrots, protect your collection, and load the 3D game in your browser.",
+    "Find Steal A Brainrot Unblocked plus other free browser games, quick guides, controls, and no-download online play from one simple game hub.",
   path: "/",
   image: homepageImage,
 });
@@ -153,6 +154,13 @@ export default function HomePage() {
             <p className="eyebrow">Play now</p>
             <h1 id="home-game-title">{heroGame.name}</h1>
             <p>{heroGame.description}</p>
+            <p>
+              For the focused game page, open{" "}
+              <Link href="/games/steal-a-brainrot-unblocked">
+                Play Steal A Brainrot Unblocked
+              </Link>
+              .
+            </p>
           </div>
           <div className="overview-tags" aria-label="Homepage highlights">
             <span>Free online</span>
