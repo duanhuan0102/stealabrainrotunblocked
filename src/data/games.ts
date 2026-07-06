@@ -581,6 +581,87 @@ export const games: Game[] = [
     image: "/images/games/bit-planes-cover.webp",
     embedUrl: "https://medv.io/bit-planes/",
   },
+  {
+    slug: "planet-clicker",
+    name: "Planet Clicker",
+    tagline:
+      "Click planets, build energy income, buy upgrades, and unlock new worlds in a space idle game.",
+    description:
+      "Play Planet Clicker online for free. Build energy by clicking planets, buy upgrades, unlock Mars and Venus, and grow an idle space economy in your browser.",
+    instructions: [
+      "Click Play, then press Play Now inside the ZapGames frame and wait for the TurboWarp player to load.",
+      "Click or tap the planet to generate energy and keep the first upgrades moving.",
+      "Spend energy on upgrades that improve click power, automatic income, and overall production speed.",
+      "Unlock new planets such as Mars and Venus when they become affordable, then invest in their upgrades.",
+      "Keep the frame focused while playing, and avoid clearing browser data if the game stores progress locally.",
+    ],
+    content: [
+      {
+        heading: "Play Planet Clicker online",
+        paragraphs: [
+          "Planet Clicker is a space idle clicker game about turning simple taps into a growing energy economy. You start by clicking a planet for energy, then use that energy to buy upgrades that make every click stronger or add automatic production while the game keeps running.",
+          "This Planet Clicker online page uses the public ZapGames embed rather than a local game package. The wrapper opens a TurboWarp-packaged HTML5 version of the game, so you can play in the browser without downloading an APK, EXE, or separate app.",
+        ],
+      },
+      {
+        heading: "How Planet Clicker gameplay works",
+        paragraphs: [
+          "The main loop is easy to understand: click the planet, watch the energy total rise, buy an upgrade, and repeat with better production. Early progress depends on active clicking, but the game becomes more interesting once upgrades begin producing energy automatically in the background.",
+          "Planet Clicker is not about fast reflexes or complicated combat. It is an incremental game where each purchase changes the next decision. A small click upgrade can help right now, while an idle generator may pay off better if you plan to keep the game open for a longer session.",
+        ],
+        bullets: [
+          "Use active clicks to push through the slow opening.",
+          "Compare upgrade costs before spending all of your energy.",
+          "Let idle production build while you decide what to unlock next.",
+        ],
+      },
+      {
+        heading: "Energy guide and best upgrade habits",
+        paragraphs: [
+          "A good Planet Clicker strategy starts with balanced energy growth. If you only buy click power, you may need to keep tapping constantly. If you only buy idle upgrades too early, the opening can feel slower than necessary. The best first runs usually mix both so each click feels useful while passive income keeps rising.",
+          "When several upgrades are available, look for the option that changes your next minute the most. A cheaper upgrade can be better than saving too long for a larger one, especially when it helps you reach the next planet or production tier sooner. Planet Clicker rewards steady compounding more than random spending.",
+        ],
+        bullets: [
+          "Buy low-cost upgrades early to speed up the first energy milestones.",
+          "Shift toward idle income once each click already feels productive.",
+          "Avoid spending only on the newest upgrade if older options give faster value.",
+        ],
+      },
+      {
+        heading: "Unlocking planets and planning longer runs",
+        paragraphs: [
+          "Many players search for how to unlock Mars, Venus, or all planets in Planet Clicker because the game opens up as new worlds become available. Each planet acts like a new stage of production, giving you another place to invest energy and another reason to keep improving your income rate.",
+          "Do not rush every unlock the second it appears. If your current energy income is still low, a few more upgrades on the active planet can make the next unlock easier to afford and easier to develop. The stronger your base production becomes, the faster each new world starts paying back its cost.",
+        ],
+      },
+      {
+        heading: "Controls, devices, and unblocked play notes",
+        paragraphs: [
+          "Planet Clicker controls are built around mouse clicks and touch taps, so the game fits desktop, Chromebook, tablet, and mobile browser play. Desktop is usually the most comfortable option for repeated clicking, while phones and tablets can work well when the frame finishes loading and the screen has enough room for the upgrade buttons.",
+          "The current embed returns a normal response and does not send common frame-blocking headers, which makes it suitable for this site player. Access can still depend on a school, work, or public network because the playable frame loads from ZapGames and then opens the actual game from a separate Planet Clicker game host.",
+        ],
+        bullets: [
+          "Click inside the player first if the game does not respond immediately.",
+          "Refresh once if the preloader stalls on a restricted network.",
+          "Use the full-screen button when available for easier upgrade management.",
+        ],
+      },
+    ],
+    category: "arcade",
+    tags: ["clicker", "idle", "incremental", "strategy", "mobile"],
+    accent: "#35d6ff",
+    icon: "P",
+    developer: "ZapGames.io",
+    technology: "HTML5 Scratch/TurboWarp iframe",
+    platforms: ["Desktop", "Mobile", "Tablet", "Chromebook"],
+    publishedAt: "2026-07-06",
+    updatedAt: "2026-07-06",
+    featured: true,
+    trending: true,
+    plays: 64200,
+    image: "/images/games/planet-clicker-cover.webp",
+    embedUrl: "https://zapgames.io/planet-clicker.embed",
+  },
 ];
 
 export function getGameBySlug(slug: string) {
