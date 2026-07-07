@@ -3,7 +3,7 @@ import { siteConfig } from "@/src/config/site";
 
 const primaryLinks = [
   { label: "Home", href: "/", icon: "PLAY" },
-  { label: "Play Game", href: "/games/steal-a-brainrot-unblocked", icon: "GAME" },
+  { label: "Play Game", href: "/", icon: "GAME" },
   { label: "Action Games", href: "/categories/action", icon: "3D" },
   { label: "Search", href: "/search", icon: "FIND" },
 ];
@@ -23,7 +23,7 @@ export function AppSidebar() {
     <aside className="app-sidebar" aria-label="Site navigation">
       <nav className="app-sidebar__primary" aria-label="Game lists">
         {primaryLinks.map((item) => (
-          <Link key={item.href} href={item.href} className="app-sidebar__link">
+          <Link key={item.label} href={item.href} className="app-sidebar__link">
             <span className="app-sidebar__icon" aria-hidden="true">
               {item.icon}
             </span>

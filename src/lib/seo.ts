@@ -13,6 +13,7 @@ interface MetadataInput {
   title: string;
   description: string;
   path: string;
+  canonicalPath?: string;
   type?: "website" | "article";
   image?: string;
 }
@@ -21,10 +22,12 @@ export function createMetadata({
   title,
   description,
   path,
+  canonicalPath,
   type = "website",
   image,
 }: MetadataInput): Metadata {
-  const canonical = absoluteUrl(path);
+  const canonical = absoluteUrl(canonicalPath ?? path);
+  const pageUrl = absoluteUrl(path);
 
   return {
     title,
@@ -35,7 +38,7 @@ export function createMetadata({
     openGraph: {
       title,
       description,
-      url: canonical,
+      url: pageUrl,
       siteName: siteConfig.name,
       locale: siteConfig.locale,
       type,

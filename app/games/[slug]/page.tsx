@@ -43,6 +43,8 @@ export async function generateMetadata({
         : `${game.name} - Play Online Free`,
     description: game.description,
     path: `/games/${game.slug}`,
+    canonicalPath:
+      game.slug === "steal-a-brainrot-unblocked" ? "/" : undefined,
     type: "article",
   });
 }

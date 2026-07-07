@@ -24,7 +24,7 @@ export function SiteFooter() {
         <div>
           <h2>Discover</h2>
           <ul>
-            <li><Link href="/games/steal-a-brainrot-unblocked">Play Game</Link></li>
+            <li><Link href="/">Play Game</Link></li>
             <li><Link href="/categories/action">Action Games</Link></li>
             <li><Link href="/search">Search Games</Link></li>
           </ul>

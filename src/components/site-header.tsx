@@ -34,7 +34,7 @@ export function SiteHeader() {
         </form>
 
         <div className="header-actions" aria-label="Quick actions">
-          <Link href="/games/steal-a-brainrot-unblocked" className="header-icon-button" aria-label="Play Steal A Brainrot Unblocked">
+          <Link href="/" className="header-icon-button" aria-label="Play Steal A Brainrot Unblocked">
             <span aria-hidden="true">P</span>
           </Link>
           <Link href="/categories/action" className="header-icon-button" aria-label="Action games">
