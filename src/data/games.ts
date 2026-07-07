@@ -743,6 +743,75 @@ export const games: Game[] = [
     image: "/images/games/slope-unblocked-cover.webp",
     embedUrl: "https://ozgames.io/slope.embed",
   },
+  {
+    slug: "snow-rider-3d-unblocked",
+    name: "Snow Rider 3D Unblocked",
+    tagline:
+      "Ride down snowy 3D slopes, dodge obstacles, use clean lines, and chase a longer winter run.",
+    description:
+      "Play Snow Rider 3D Unblocked online for free. Steer down a snowy 3D slope, avoid obstacles, line up ramps, and push for a better downhill score.",
+    instructions: [
+      "Click inside the player and wait for the Unity WebGL game to finish loading.",
+      "Use the keyboard movement controls shown by the game to steer across the snowy track.",
+      "Make small left and right corrections instead of holding one direction too long.",
+      "Line up before ramps, narrow lanes, and obstacle clusters so the rider stays balanced.",
+      "Restart quickly after a crash and use each run to learn the next safe route.",
+    ],
+    content: [
+      {
+        heading: "Play Snow Rider 3D Unblocked online",
+        paragraphs: [
+          "Snow Rider 3D Unblocked is a winter downhill game built around speed, steering, and clean reactions. The run sends your rider down a bright snowy mountain path where the track bends, obstacles appear ahead, and every correction needs to happen before the slope narrows.",
+          "The playable version loads as a Unity WebGL game from the Snow Rider Unblocked GitHub Pages source. Open the frame, let the 3D scene finish loading, and focus on keeping a smooth line through the snow instead of making late emergency turns.",
+        ],
+      },
+      {
+        heading: "How Snow Rider 3D works",
+        paragraphs: [
+          "The core loop is simple: stay on the downhill route for as long as possible. The slope gives you forward speed, while your job is to read the next stretch of snow, avoid solid hazards, and guide the rider through open lanes before the camera catches up with a dangerous turn.",
+          "Ramps and uneven sections make positioning more important than raw speed. If you enter a ramp at a bad angle, the landing can leave you pointed toward a barrier or tree. A safer approach is to straighten the rider before takeoff, then make a small adjustment after landing.",
+        ],
+        bullets: [
+          "Watch the path ahead instead of staring only at the rider.",
+          "Choose the widest safe lane when several obstacles are close together.",
+          "Recover to the center of the track after every risky section.",
+        ],
+      },
+      {
+        heading: "Controls and first-run tips",
+        paragraphs: [
+          "Start by clicking inside the Snow Rider 3D Unblocked player so the browser sends keyboard input to the game. Use the movement controls shown by the game to steer left and right, then practice short taps. Small corrections are easier to recover from than wide turns at high speed.",
+          "During the first few runs, do not chase every risky opening. Learn how quickly the rider slides, how much space each obstacle needs, and how early you need to line up for ramps. Once the timing feels familiar, longer runs become more about rhythm than panic.",
+        ],
+        bullets: [
+          "Tap lightly when the slope becomes narrow.",
+          "Set your line before a ramp rather than turning on it.",
+          "Avoid overcorrecting immediately after a landing.",
+        ],
+      },
+      {
+        heading: "Strategy for longer downhill runs",
+        paragraphs: [
+          "A strong Snow Rider 3D run usually starts with patient steering. Staying near the middle gives you more options when the next obstacle appears. Moving too far to one side can work for a single dodge, but it often makes the following turn harder because there is less room to correct.",
+          "Look for sequences, not single hazards. A clean first dodge should also leave you ready for the next ramp, barrier, or tree. If two routes look possible, choose the one that keeps the rider straight after the obstacle, because a stable exit is what keeps the run alive.",
+        ],
+      },
+    ],
+    category: "racing",
+    tags: ["3d", "racing", "endless", "high-score", "physics", "mobile"],
+    accent: "#4fc3ff",
+    icon: "S",
+    developer: "snowrider-unblocked.github.io",
+    technology: "Unity WebGL iframe",
+    platforms: ["Desktop", "Chromebook", "Tablet", "Mobile"],
+    publishedAt: "2026-07-07",
+    updatedAt: "2026-07-07",
+    featured: true,
+    trending: true,
+    plays: 81200,
+    image: "/images/games/snow-rider-3d-unblocked-cover.webp",
+    embedUrl: "https://snowrider-unblocked.github.io/game/",
+  },
 ];
 
 export function getGameBySlug(slug: string) {

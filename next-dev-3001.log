@@ -1,0 +1,52 @@
+npm warn Unknown env config "min-release-age". This will stop working in the next major version of npm.
+
+> game-seo-template@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.19
+   - Local:        http://localhost:3001
+   - Network:      http://192.168.80.81:3001
+
+ ✓ Starting...
+ ✓ Ready in 2.5s
+ ○ Compiling / ...
+ ✓ Compiled / in 1106ms (685 modules)
+ GET / 200 in 1734ms
+ ○ Compiling /games/[slug] ...
+ ✓ Compiled /games/[slug] in 667ms (703 modules)
+ GET /games/snow-rider-3d-unblocked 200 in 1876ms
+ GET / 200 in 191ms
+ GET /games/snow-rider-3d-unblocked 200 in 200ms
+ GET /games/snow-rider-3d-unblocked 200 in 441ms
+ ⚠ Cross origin request detected from 192.168.80.81 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ ✓ Compiled /icon.png in 348ms (472 modules)
+ GET /icon.png?2eaf4f8e7bba1000 200 in 553ms
+ ✓ Compiled / in 256ms (474 modules)
+ GET / 200 in 565ms
+ GET /games/snow-rider-3d-unblocked 200 in 135ms
+ GET /icon.png?2eaf4f8e7bba1000 200 in 51ms
+ ○ Compiling /dmca ...
+ ✓ Compiled /dmca in 1643ms (723 modules)
+ GET /dmca 200 in 1862ms
+ GET /dmca 200 in 44ms
+ ✓ Compiled /privacy in 441ms (725 modules)
+ GET /privacy 200 in 561ms
+ GET /privacy 200 in 43ms
+ ✓ Compiled /terms in 416ms (708 modules)
+ GET /terms 200 in 685ms
+ GET /privacy 200 in 55ms
+ GET /privacy 200 in 41ms
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 505ms (710 modules)
+ GET /contact 200 in 709ms
+ GET /contact 200 in 39ms
+ ✓ Compiled /about in 456ms (712 modules)
+ GET /about 200 in 613ms
+ ○ Compiling /search ...
+ ✓ Compiled /search in 739ms (690 modules)
+ GET /search 200 in 1929ms
+ GET /search 200 in 64ms
+ ○ Compiling / ...
+ ✓ Compiled / in 514ms (459 modules)
+ GET / 200 in 862ms
