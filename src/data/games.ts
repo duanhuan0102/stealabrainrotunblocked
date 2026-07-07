@@ -662,6 +662,87 @@ export const games: Game[] = [
     image: "/images/games/planet-clicker-cover.webp",
     embedUrl: "https://zapgames.io/planet-clicker.embed",
   },
+  {
+    slug: "slope-unblocked",
+    name: "Slope Unblocked",
+    tagline:
+      "Steer a neon ball down a fast 3D slope, dodge red blocks, and chase a cleaner high-score run.",
+    description:
+      "Play Slope Unblocked online for free. Steer a neon ball down a fast 3D slope, dodge red obstacles, survive sharp turns, and chase a higher score.",
+    instructions: [
+      "Click inside the game frame, press Play Now if the OzGames loader appears, and wait for the 3D track to start.",
+      "Use the Left and Right arrow keys, or A and D, to steer the rolling ball across the slope.",
+      "Keep the ball centered on the track so sudden turns, gaps, and tilted platforms are easier to handle.",
+      "Avoid red blocks and track edges because one collision or fall ends the run immediately.",
+      "Use short taps instead of holding a key when the speed climbs and the path becomes narrow.",
+    ],
+    content: [
+      {
+        heading: "Play Slope Unblocked online",
+        paragraphs: [
+          "Slope Unblocked is a fast 3D arcade runner built around one clear challenge: keep a neon ball alive while it rolls down an endless slope. The track drops forward automatically, speed keeps building, and every second asks for a small steering correction before the next turn, gap, or red obstacle arrives.",
+          "This Slope Unblocked page uses the public OzGames embed, so there is no download and no local game package stored in this project. Open the player, let the iframe finish loading, and play Slope Unblocked online from the browser with the guide, controls, and related games available on the same page.",
+        ],
+      },
+      {
+        heading: "What kind of game is Slope?",
+        paragraphs: [
+          "Slope is best described as an endless high-score game with racing pressure. You are not racing another car or clearing fixed levels; you are racing the track itself. The ball accelerates, the camera pushes forward, and the road keeps changing shape until a bad angle sends you off the side or into an obstacle.",
+          "That simple loop is why many players search for Slope Unblocked, Slope game, Slope online, or a Slope Unblocked game that opens quickly. The rules are easy to understand in the first few seconds, but the run becomes demanding because the track punishes oversteering, late reactions, and panic movements.",
+        ],
+        bullets: [
+          "Endless 3D slope running with no fixed finish line.",
+          "Keyboard steering focused on small left and right corrections.",
+          "High-score replay value based on distance, control, and consistency.",
+        ],
+      },
+      {
+        heading: "Controls and first-run tips",
+        paragraphs: [
+          "The main Slope Unblocked controls are intentionally simple. Use the Left and Right arrow keys, or A and D, to guide the ball. You do not press a separate gas button, brake button, or jump button. Gravity and the slope create the speed, while your job is to keep the ball lined up with the safest part of the next platform.",
+          "Your first few runs should be about learning restraint. Holding a direction too long can be worse than reacting late because the ball slides quickly at higher speed. Tap lightly, return toward the center after each turn, and look ahead of the ball instead of staring directly at it. The earlier you read a bend, the less dramatic your correction needs to be.",
+        ],
+        bullets: [
+          "Use short taps once the ball starts moving quickly.",
+          "Stay near the center whenever the next obstacle is not clear.",
+          "Watch the road ahead so gaps and red blocks do not surprise you.",
+        ],
+      },
+      {
+        heading: "How to survive longer runs",
+        paragraphs: [
+          "Good Slope Unblocked strategy starts with clean positioning. The center of the track gives you more time to react in either direction, especially when the road tilts or narrows. If you drift too far left or right, the next bend can force a desperate correction that sends the ball into a wall or off the platform.",
+          "As speed increases, treat every input as a small adjustment instead of a hard turn. Red blocks are dangerous because they often appear right after a curve or drop, so avoid entering a new platform at a sharp angle. A calmer line may feel slower, but it usually keeps the run alive longer than chasing every open lane at the last moment.",
+        ],
+        bullets: [
+          "Recover to the center after clearing a dangerous section.",
+          "Enter gaps straight when possible so the landing is easier to control.",
+          "Avoid wide zigzags because they leave less room for the next obstacle.",
+        ],
+      },
+      {
+        heading: "Unblocked access, fullscreen, and devices",
+        paragraphs: [
+          "Players often look for Slope Unblocked fullscreen, Slope Unblocked 3D, or play Slope Unblocked from a school Chromebook because the game works best when the track is large and easy to read. Use the full-screen option in the player if it is available, and click inside the frame before steering so the browser sends keyboard input to the game.",
+          "Access can still depend on the network because the playable frame loads from OzGames. The current embed URL returns normally and does not send common frame-blocking headers, which makes it suitable for this game page, but a school, work, or public connection can still block third-party game assets. Desktop and Chromebook browsers are the safest choice; tablets may work with a keyboard, while phones are less ideal for this keyboard-first runner.",
+        ],
+      },
+    ],
+    category: "arcade",
+    tags: ["3d", "racing", "endless", "high-score", "physics", "action"],
+    accent: "#27f57a",
+    icon: "S",
+    developer: "Y8 Studio / OzGames.io",
+    technology: "HTML5 WebGL iframe",
+    platforms: ["Desktop", "Chromebook", "Tablet with keyboard"],
+    publishedAt: "2026-07-07",
+    updatedAt: "2026-07-07",
+    featured: true,
+    trending: true,
+    plays: 73500,
+    image: "/images/games/slope-unblocked-cover.webp",
+    embedUrl: "https://ozgames.io/slope.embed",
+  },
 ];
 
 export function getGameBySlug(slug: string) {

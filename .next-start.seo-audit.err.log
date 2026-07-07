@@ -1,4 +1,0 @@
-npm warn Unknown env config "min-release-age". This will stop working in the next major version of npm.
-Error: Internal: NoFallbackError
-    at n (D:\stealabrainrotunblocked\.next\server\app\games\[slug]\page.js:2:1062)
-    at responseGenerator (D:\stealabrainrotunblocked\.next\server\app\games\[slug]\page.js:2:1918)

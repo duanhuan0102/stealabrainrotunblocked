@@ -17,6 +17,8 @@ npm-debug.log*
 yarn-debug.log*
 pnpm-debug.log*
 .next-dev.*.log
+.next-start.*.log
+/logs/
 
 # editor and operating system
 .idea/
