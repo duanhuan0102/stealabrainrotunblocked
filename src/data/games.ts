@@ -812,6 +812,75 @@ export const games: Game[] = [
     image: "/images/games/snow-rider-3d-unblocked-cover.webp",
     embedUrl: "https://snowrider-unblocked.github.io/game/",
   },
+  {
+    slug: "fnf-unblocked",
+    name: "FNF Unblocked",
+    tagline:
+      "Match arrow notes to the beat, protect the health bar, and win rhythm battles online.",
+    description:
+      "Play FNF Unblocked online. Match arrow notes to the beat, protect the health bar, and practice Friday Night Funkin' timing in a playable HTML5 rhythm build.",
+    instructions: [
+      "Click inside the player and wait for the HTML5 rhythm game to finish loading.",
+      "Use the Arrow keys or WASD to hit the matching note directions.",
+      "Press each key when the scrolling note reaches the target marker.",
+      "Keep your timing steady because missed notes drain the health bar.",
+      "Restart a song and practice the same patterns when faster sections start causing mistakes.",
+    ],
+    content: [
+      {
+        heading: "Play FNF Unblocked online",
+        paragraphs: [
+          "FNF Unblocked is a rhythm battle game built around reading arrow patterns and pressing the matching directions on the beat. Each song sends notes toward a target area, and your job is to hit the correct key at the moment the note lines up. Clean timing raises your advantage, while late, early, or wrong inputs make the battle harder to recover.",
+          "The fun comes from keeping your hands calm while the music speeds up. Early sections teach the rhythm and key positions, then later patterns ask you to react faster without mashing. Treat the first run of a song as a read-through: watch how the arrows move, learn where the dense clusters appear, and use the next attempt to clean up the parts that broke your combo.",
+        ],
+      },
+      {
+        heading: "How FNF rhythm battles work",
+        paragraphs: [
+          "Every battle is a call-and-response test. The game shows direction notes, then asks you to mirror them with the keyboard. Accurate hits help you hold the health bar, build score, and stay in control of the track. Missing too many notes is the main failure condition, because the health bar can fall until the song ends your run.",
+          "Do not look at the whole screen at once. The most useful place to watch is the target line where notes must be hit. Peripheral vision can track the next few arrows, but your timing should lock onto the point where each note overlaps the marker. That habit makes fast streams easier because you are reacting to rhythm and alignment instead of chasing every arrow from the bottom of the screen.",
+        ],
+        bullets: [
+          "Use the target markers as your timing point.",
+          "Recover after a mistake instead of pressing extra keys in panic.",
+          "Listen to the beat, but confirm each input visually before hitting it.",
+        ],
+      },
+      {
+        heading: "Controls and first-run tips",
+        paragraphs: [
+          "FNF Unblocked works best with a physical keyboard. Use the Arrow keys or WASD, whichever layout keeps your hands more relaxed. If one hand feels cramped, split the directions across both hands and practice slowly until each key position feels automatic. A comfortable hand position matters more than trying to hit every note with maximum force.",
+          "For your first few songs, aim for consistency rather than perfect accuracy. Short missed sections are recoverable if you return to the beat quickly. The worst habit is double-pressing after a mistake, because that can turn one miss into several. Let the bad note pass, find the next clear arrow, and rebuild your timing from there.",
+        ],
+        bullets: [
+          "Click the frame once before playing so keyboard input reaches the game.",
+          "Keep your fingers resting near the four direction keys.",
+          "Practice repeated left-right or up-down pairs until they feel even.",
+        ],
+      },
+      {
+        heading: "Strategy for harder note patterns",
+        paragraphs: [
+          "Harder FNF patterns usually fail players for two reasons: rushing before the note reaches the marker, or freezing when several arrows arrive close together. When a dense section starts, read it as small groups instead of one long wall of notes. Two-note and three-note chunks are easier to remember, and they help your hands stay in rhythm through a fast passage.",
+          "If a song keeps ending in the same place, use that section as the practice target. Watch the order of the arrows, say the directions quietly if it helps, and focus on surviving the pattern before chasing a cleaner score. The health bar gives you room to recover, so a rough pass through a difficult sequence can be better than restarting after every imperfect moment.",
+        ],
+      },
+    ],
+    category: "arcade",
+    tags: ["rhythm", "high-score", "retro", "action"],
+    accent: "#ff4eb8",
+    icon: "F",
+    developer: "ninjamuffin99, PhantomArcade, The Funkin' Crew",
+    technology: "Haxe OpenFL HTML5 iframe",
+    platforms: ["Desktop", "Chromebook", "Tablet with keyboard"],
+    publishedAt: "2026-07-08",
+    updatedAt: "2026-07-08",
+    featured: true,
+    trending: true,
+    plays: 92800,
+    image: "/images/games/fnf-unblocked-cover.webp",
+    embedUrl: "https://jasongamesdev.github.io/friday-night-funkin/",
+  },
 ];
 
 export function getGameBySlug(slug: string) {
