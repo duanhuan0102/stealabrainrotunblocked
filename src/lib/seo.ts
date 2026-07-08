@@ -14,6 +14,7 @@ interface MetadataInput {
   description: string;
   path: string;
   canonicalPath?: string;
+  absoluteTitle?: boolean;
   type?: "website" | "article";
   image?: string;
 }
@@ -23,6 +24,7 @@ export function createMetadata({
   description,
   path,
   canonicalPath,
+  absoluteTitle = false,
   type = "website",
   image,
 }: MetadataInput): Metadata {
@@ -30,7 +32,7 @@ export function createMetadata({
   const pageUrl = absoluteUrl(path);
 
   return {
-    title,
+    title: absoluteTitle ? { absolute: title } : title,
     description,
     alternates: {
       canonical,

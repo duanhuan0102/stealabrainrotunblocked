@@ -22,6 +22,8 @@ export function generateStaticParams() {
   return games.map((game) => ({ slug: game.slug }));
 }
 
+const standaloneTitleAfter = "2026-07-08";
+
 export async function generateMetadata({
   params,
 }: GamePageProps): Promise<Metadata> {
@@ -45,6 +47,7 @@ export async function generateMetadata({
     path: `/games/${game.slug}`,
     canonicalPath:
       game.slug === "steal-a-brainrot-unblocked" ? "/" : undefined,
+    absoluteTitle: game.publishedAt > standaloneTitleAfter,
     type: "article",
   });
 }
