@@ -4,6 +4,7 @@ import { ArcadeLayout } from "@/src/components/arcade-layout";
 import { GamePlayer } from "@/src/components/game-player";
 import { GameStrip } from "@/src/components/game-strip";
 import { JsonLd } from "@/src/components/json-ld";
+import { RaidPlanner } from "@/src/components/raid-planner";
 import { siteConfig } from "@/src/config/site";
 import {
   games,
@@ -169,6 +170,8 @@ export default function HomePage() {
       <JsonLd data={structuredData} />
       <ArcadeLayout currentSlug={heroGame.slug} games={games}>
         <GamePlayer game={heroGame} />
+
+        <RaidPlanner />
 
         <section className="portal-content-panel" aria-labelledby="home-game-title">
           <div className="portal-section-heading">
