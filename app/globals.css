@@ -2460,6 +2460,55 @@ h3 {
   color: #cbd1e2;
 }
 
+.raid-planner__form {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.raid-planner__form label {
+  display: grid;
+  gap: 7px;
+  color: #dce1ef;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.raid-planner__form select,
+.raid-planner__form button {
+  min-height: 42px;
+  padding: 0 12px;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #24283b;
+  border-radius: 7px;
+  font-weight: 900;
+}
+
+.raid-planner__form button {
+  align-self: end;
+  cursor: pointer;
+  background: var(--portal-accent);
+}
+
+.raid-planner__toggle {
+  align-content: end;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.raid-planner__toggle input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--portal-accent);
+}
+
+.raid-planner__result {
+  margin: 16px 0 0;
+  color: #fff;
+  font-weight: 800;
+}
+
 .shell {
   width: min(calc(100% - 32px), 1180px);
 }

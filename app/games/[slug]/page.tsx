@@ -7,6 +7,7 @@ import { GameOverview } from "@/src/components/game-overview";
 import { GamePlayer } from "@/src/components/game-player";
 import { GameStrip } from "@/src/components/game-strip";
 import { JsonLd } from "@/src/components/json-ld";
+import { RaidPlanner } from "@/src/components/raid-planner";
 import { siteConfig } from "@/src/config/site";
 import { getCategoryBySlug } from "@/src/data/categories";
 import { games, getGameBySlug, getRelatedGames } from "@/src/data/games";
@@ -131,6 +132,8 @@ export default async function GamePage({ params }: GamePageProps) {
       <ArcadeLayout currentSlug={game.slug} games={games}>
         <GamePlayer game={game} />
 
+        {game.slug === "steal-a-brainrot-unblocked" ? <RaidPlanner /> : null}
+
         <AdSlot />
 
         {relatedGames.length > 0 ? (
@@ -142,7 +145,11 @@ export default async function GamePage({ params }: GamePageProps) {
         <section className="portal-content-panel" aria-labelledby="game-guide-title">
           <div className="portal-section-heading">
             <p className="eyebrow">Walkthrough</p>
-            <h2 id="game-guide-title">{game.name} guide</h2>
+            <h2 id="game-guide-title">
+              {game.slug === "steal-a-brainrot-unblocked"
+                ? "Steal A Brainrot route guide"
+                : `${game.name} guide`}
+            </h2>
             <p>{game.tagline}</p>
           </div>
           <ContentSections sections={game.content} />

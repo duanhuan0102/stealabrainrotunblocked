@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { AdSlot } from "@/src/components/ad-slot";
 import { ArcadeLayout } from "@/src/components/arcade-layout";
 import { GamePlayer } from "@/src/components/game-player";
@@ -169,7 +168,7 @@ export default function HomePage() {
     <main>
       <JsonLd data={structuredData} />
       <ArcadeLayout currentSlug={heroGame.slug} games={games}>
-        <GamePlayer game={heroGame} autoStart />
+        <GamePlayer game={heroGame} />
 
         <section className="portal-content-panel" aria-labelledby="home-game-title">
           <div className="portal-section-heading">
@@ -198,9 +197,6 @@ export default function HomePage() {
               keyboard movement to raid rival bases, carry a brainrot back, and
               protect your own collection.
             </p>
-            <Link className="button button--ghost" href="/games/steal-a-brainrot-unblocked">
-              Controls & guide
-            </Link>
           </div>
         </section>
 

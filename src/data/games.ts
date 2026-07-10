@@ -16,9 +16,9 @@ export const games: Game[] = [
     ],
     content: [
       {
-        heading: "Play Steal A Brainrot Unblocked online",
+        heading: "Play the 3D browser game",
         paragraphs: [
-          "Steal A Brainrot Unblocked drops you into a colorful 3D arena where collecting is only half the job. You need to find a target, take a brainrot, and get back to your base before another player cuts off the route.",
+          "This game drops you into a colorful 3D arena where collecting is only half the job. You need to find a target, take a brainrot, and get back to your base before another player cuts off the route.",
           "This browser version uses the live Unity WebGL build from 8Games.net, so there is no download and no local game package stored in this project. Open the player on this page, press the play button, and keep the guide nearby while the game loads in the same screen.",
           "The page is designed as the play page rather than a doorway to another site. You can start the game above, read the controls below, then return to the same frame to test a safer route without opening a separate tab.",
         ],
