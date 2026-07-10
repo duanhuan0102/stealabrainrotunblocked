@@ -135,6 +135,8 @@ export default async function GamePage({ params }: GamePageProps) {
       <ArcadeLayout currentSlug={game.slug} games={games}>
         <GamePlayer game={game} />
 
+        <GameOverview game={game} />
+
         {game.slug === "steal-a-brainrot-unblocked" ? <RaidPlanner /> : null}
         {game.slug === "acceleration-city" ? <RaidPlanner mode="drive" /> : null}
 
@@ -143,8 +145,6 @@ export default async function GamePage({ params }: GamePageProps) {
         {relatedGames.length > 0 ? (
           <GameStrip games={relatedGames} label={`Games like ${game.name}`} />
         ) : null}
-
-        <GameOverview game={game} />
 
         <section className="portal-content-panel" aria-labelledby="game-guide-title">
           <div className="portal-section-heading">

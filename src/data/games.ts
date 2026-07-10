@@ -282,14 +282,15 @@ export const games: Game[] = [
         paragraphs: [
           "Acceleration City is a browser-based 3D driving adventure set inside a bright futuristic map. Instead of locking you to one racing lane, it gives you room to explore roads, ramps, rooftops, desert paths, and neon districts while you learn how speed and control change each route.",
           "This page uses the external FreeWebGames embed, so there is no local HTML game package stored in this project. Open the player, let the iframe finish loading, and play from the browser. If you are looking for a download, this page is built for browser play instead of APK or EXE files.",
-          "The route checker above gives the page a practical on-page task before you start driving. Pick a goal, choose the kind of route you want to try, and use the suggestion to decide whether to scout slowly or commit with boost.",
+          "The route checker gives the page a practical on-page task before you start driving. Pick a goal, choose the kind of route you want to try, and use the suggestion to decide whether to scout slowly or commit with boost.",
+          "For search intent, the important point is simple: the Acceleration City driving game is playable from this page, with route help, controls, and access notes kept beside the player.",
         ],
       },
       {
         heading: "Open-world driving and vehicle upgrades",
         paragraphs: [
           "Gameplay mixes open-world exploration with acceleration timing. Cruise through the city to learn the layout, then push harder when a straight road or clean ramp gives you space to build speed. The fun comes from deciding when to drive carefully and when to use the full power of your ride.",
-          "The game also lets you change the way your vehicle feels. Cars, bikes, trucks, and hovercraft-style rides all support the fantasy of building a better machine for the map in front of you. Upgrades make each run feel more personal, especially when you choose routes based on handling, drift control, and boost timing.",
+          "The game also lets you change the way your vehicle feels. Cars, bikes, trucks, and hovercraft-style rides all support the fantasy of building a better machine for the map in front of you. Upgrades make each Acceleration City route feel more personal, especially when you choose paths based on handling, drift control, and boost timing.",
         ],
         bullets: [
           "Explore wide city roads before chasing difficult jumps.",
@@ -340,7 +341,7 @@ export const games: Game[] = [
         heading: "Driving goals to try first",
         paragraphs: [
           "A good opening session should prove that the player, controls, and route planning all work on your device. Start by driving a clean loop around the central streets, then use one ramp, one rooftop path, and one reset so you understand how the frame reacts.",
-          "After that, set a small challenge: reach a higher platform, cross a district without crashing, or use boost only after the car is already straight. These goals make the browser version feel more like a skill test than a simple driving sandbox.",
+          "After that, set a small challenge: reach a higher platform, cross a district without crashing, or use boost only after the car is already straight. These Acceleration City browser goals make the browser version feel more like a skill test than a simple driving sandbox.",
           "If you are using CoBot tools, change only one thing at a time. Testing one trigger, one platform, or one boost point makes it easier to understand what helped and what broke the route.",
         ],
       },
