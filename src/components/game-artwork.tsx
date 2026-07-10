@@ -37,7 +37,8 @@ export function GameArtwork({
           className="game-artwork__image"
           src={image}
           alt=""
-          fill
+          width={compact ? 320 : 1200}
+          height={compact ? 180 : 675}
           sizes={compact ? "(max-width: 768px) 42vw, 220px" : "100vw"}
         />
       ) : null}

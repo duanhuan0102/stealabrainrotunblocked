@@ -7,7 +7,7 @@ export const games: Game[] = [
     tagline:
       "Raid rival bases, carry brainrots home, and grow your 3D collection online.",
     description:
-      "Steal A Brainrot Unblocked is a free online 3D action game where you raid rival bases, carry brainrots home, guard your collection, and upgrade for bigger runs.",
+      "Play Steal A Brainrot Unblocked, a free 3D browser game about raiding bases, carrying brainrots home, guarding your collection, and upgrading each run.",
     instructions: [
       "Use WASD or the arrow keys to move through the 3D arena.",
       "Enter a rival base, grab a valuable brainrot, and carry it back to your own base.",
@@ -18,8 +18,9 @@ export const games: Game[] = [
       {
         heading: "Play Steal A Brainrot Unblocked online",
         paragraphs: [
-          "Steal A Brainrot Unblocked drops you into a colorful 3D arena where collecting is only half the job. You need to find a target, steal a brainrot, and get back to your base before another player cuts off the route.",
-          "This browser version uses the live Unity WebGL build from 8Games.net, so there is no download and no local game package stored in this project. Open the page, load the iframe, and start playing the Steal A Brainrot game unblocked from the browser.",
+          "Steal A Brainrot Unblocked drops you into a colorful 3D arena where collecting is only half the job. You need to find a target, take a brainrot, and get back to your base before another player cuts off the route.",
+          "This browser version uses the live Unity WebGL build from 8Games.net, so there is no download and no local game package stored in this project. Open the player on this page, press the play button, and keep the guide nearby while the game loads in the same screen.",
+          "The page is designed as the play page rather than a doorway to another site. You can start the game above, read the controls below, then return to the same frame to test a safer route without opening a separate tab.",
         ],
       },
       {
@@ -27,7 +28,8 @@ export const games: Game[] = [
         paragraphs: [
           "Each run is about balancing risk and reward. A valuable brainrot is worth chasing, but carrying it makes the return trip more dangerous because rivals can react before you reach safety.",
           "Move through open lanes, watch base entrances, and decide when to retreat. The best runs usually come from stealing at the right moment instead of rushing straight into the busiest area.",
-          "If you are using this as a Steal A Brainrot game unblocked page, focus on learning one reliable route first. A familiar path gives you more time to react when another player moves toward your base or when a safer target appears.",
+          "If you are using this as a quick browser play page, focus on learning one reliable route first. A familiar path gives you more time to react when another player moves toward your base or when a safer target appears.",
+          "Try to separate scouting from carrying. Look at the lane, choose a target, and only commit when you already know where you will turn on the way back. That habit keeps the run calmer and makes sudden blocks easier to handle.",
         ],
         bullets: [
           "Scout the path before grabbing a target.",
@@ -38,8 +40,9 @@ export const games: Game[] = [
       {
         heading: "Tips for free online play",
         paragraphs: [
-          "Players searching for Steal A Brainrot online or an unblocked Steal A Brainrot game usually want quick access and clear controls. Start with safer targets, learn where rivals tend to gather, and save upgrades for the brainrots that help your base earn faster.",
+          "Players searching for this kind of online brainrot game usually want quick access and clear controls. Start with safer targets, learn where rivals tend to gather, and save upgrades for the brainrots that help your base earn faster.",
           "The free online version works best when you treat each attempt as practice. Do not chase every expensive brainrot immediately. Watch how the arena opens, wait for a clean gap, and return home before the route becomes crowded.",
+          "Short sessions are useful because each run teaches one practical detail: where players gather, which corner slows you down, or when a rival is likely to guard the entrance. Use those small lessons before spending everything on a riskier target.",
         ],
         bullets: [
           "Use the camera angle to read paths before committing.",
@@ -50,8 +53,9 @@ export const games: Game[] = [
       {
         heading: "Controls and device notes",
         paragraphs: [
-          "Steal A Brainrot Unblocked runs as a Unity WebGL browser game, so performance can depend on the device and network. Desktop browsers usually give the smoothest control, especially when you need quick movement during a steal.",
+          "The game runs as a Unity WebGL browser build, so performance can depend on the device and network. Desktop browsers usually give the smoothest control, especially when you need quick movement during a steal.",
           "Mobile and tablet play may still work, but loading can take longer and touch controls may feel different from keyboard movement. If the game frame does not respond right away, tap inside the player once and give the WebGL build a moment to finish loading.",
+          "On a keyboard, make small corrections instead of holding one direction for too long. The return trip often fails because a player oversteers while carrying a target, clips a corner, and gives rivals enough time to catch up.",
         ],
       },
       {
@@ -59,11 +63,28 @@ export const games: Game[] = [
         paragraphs: [
           "A strong run starts before you grab anything. Look at the rival base, check the lane back to your own area, and decide whether the target is worth the risk. A small successful steal is usually better than losing a rare brainrot in the open.",
           "When you are carrying something valuable, avoid the busiest route. Use side paths when they are clear, keep moving, and do not stop near rival entrances. The goal is to turn each steal into steady progress instead of one risky highlight.",
+          "Defense matters as much as raiding. Glance back at your own base between attempts, because another player can punish you while you are focused on the next prize. If your collection is exposed, pause the attack and protect what is already earning.",
         ],
         bullets: [
           "Take easy targets while learning the arena.",
           "Retreat when too many rivals gather near the same base.",
           "Use upgrades to make later steals easier to protect.",
+        ],
+      },
+      {
+        heading: "Why the player is built into this page",
+        paragraphs: [
+          "The game frame, basic controls, and strategy notes live together so the page can answer the search intent immediately. You do not need to use the related-game cards or navigation to reach the main experience; those links are secondary options after you finish playing.",
+          "Keeping everything on one page also helps when the WebGL build needs time to load. While the player prepares the 3D scene, you can read the first-run notes, then press play and test the route advice in the same browser tab.",
+          "If a network blocks the embedded game host, the surrounding page still gives enough context to understand the controls and retry steps. Refresh once, click inside the player, and use a modern desktop browser for the most reliable start.",
+        ],
+      },
+      {
+        heading: "Common mistakes on early runs",
+        paragraphs: [
+          "The most common beginner mistake is chasing the biggest reward before learning how the map flows. Expensive targets attract attention, and a crowded return lane can turn a good steal into a quick loss. Build confidence with lower-risk routes first.",
+          "Another mistake is ignoring timing. Wait until rivals move away from an entrance, then enter quickly and leave with a direct plan. If the path changes while you are carrying a brainrot, choose open space over the shortest route.",
+          "Finally, do not spend every run only attacking. Watch how your base is positioned, protect your current collection, and upgrade steadily. Safer progress usually beats a single dramatic raid that leaves your own side open.",
         ],
       },
     ],

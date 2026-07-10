@@ -37,7 +37,7 @@ export async function generateMetadata({
   return createMetadata({
     title:
       game.slug === "steal-a-brainrot-unblocked"
-        ? "Steal A Brainrot Game Unblocked - Play 3D Online"
+        ? "Steal A Brainrot Unblocked - Play 3D Online"
         : game.slug === "bear-clicker"
           ? "Bear Clicker Online - Play Free"
         : game.slug === "football-bros"
@@ -45,9 +45,9 @@ export async function generateMetadata({
         : `${game.name} - Play Online Free`,
     description: game.description,
     path: `/games/${game.slug}`,
-    canonicalPath:
-      game.slug === "steal-a-brainrot-unblocked" ? "/" : undefined,
-    absoluteTitle: game.publishedAt > standaloneTitleAfter,
+    absoluteTitle:
+      game.slug === "steal-a-brainrot-unblocked" ||
+      game.publishedAt > standaloneTitleAfter,
     type: "article",
   });
 }
@@ -129,7 +129,7 @@ export default async function GamePage({ params }: GamePageProps) {
     <main>
       <JsonLd data={[applicationData, breadcrumbData]} />
       <ArcadeLayout currentSlug={game.slug} games={games}>
-        <GamePlayer game={game} autoStart />
+        <GamePlayer game={game} />
 
         <AdSlot />
 
