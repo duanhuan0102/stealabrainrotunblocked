@@ -40,7 +40,7 @@ export async function generateMetadata({
       game.slug === "steal-a-brainrot-unblocked"
         ? "Steal A Brainrot Unblocked - Play 3D Online"
         : game.slug === "acceleration-city"
-          ? "Acceleration City - Play 3D Driving Game"
+          ? "Acceleration City - Play Online Driving Game"
         : game.slug === "bear-clicker"
           ? "Bear Clicker Online - Play Free"
         : game.slug === "football-bros"
