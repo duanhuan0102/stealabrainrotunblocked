@@ -39,6 +39,8 @@ export async function generateMetadata({
     title:
       game.slug === "steal-a-brainrot-unblocked"
         ? "Steal A Brainrot Unblocked - Play 3D Online"
+        : game.slug === "acceleration-city"
+          ? "Acceleration City - Play 3D Driving Game"
         : game.slug === "bear-clicker"
           ? "Bear Clicker Online - Play Free"
         : game.slug === "football-bros"
@@ -48,6 +50,7 @@ export async function generateMetadata({
     path: `/games/${game.slug}`,
     absoluteTitle:
       game.slug === "steal-a-brainrot-unblocked" ||
+      game.slug === "acceleration-city" ||
       game.publishedAt > standaloneTitleAfter,
     type: "article",
   });
@@ -133,6 +136,7 @@ export default async function GamePage({ params }: GamePageProps) {
         <GamePlayer game={game} />
 
         {game.slug === "steal-a-brainrot-unblocked" ? <RaidPlanner /> : null}
+        {game.slug === "acceleration-city" ? <RaidPlanner mode="drive" /> : null}
 
         <AdSlot />
 
