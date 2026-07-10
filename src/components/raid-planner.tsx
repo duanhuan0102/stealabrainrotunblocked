@@ -38,8 +38,20 @@ const slopeRouteOptions = {
   blocks: { label: "Red block cluster", risk: 2 },
 };
 
+const clickerTargetOptions = {
+  clicks: { label: "Boost click power", risk: 1 },
+  idle: { label: "Grow idle income", risk: 2 },
+  unlock: { label: "Unlock a planet", risk: 3 },
+};
+
+const clickerRouteOptions = {
+  cheap: { label: "Buy cheap upgrades", risk: 0 },
+  balanced: { label: "Mix active and idle", risk: 1 },
+  save: { label: "Save for a milestone", risk: 2 },
+};
+
 interface RaidPlannerProps {
-  mode?: "raid" | "drive" | "slope";
+  mode?: "raid" | "drive" | "slope" | "clicker";
 }
 
 export function RaidPlanner({ mode = "raid" }: RaidPlannerProps) {
@@ -49,10 +61,14 @@ export function RaidPlanner({ mode = "raid" }: RaidPlannerProps) {
   const [driveRoute, setDriveRoute] = useState<keyof typeof driveRouteOptions>("open");
   const [slopeTarget, setSlopeTarget] = useState<keyof typeof slopeTargetOptions>("center");
   const [slopeRoute, setSlopeRoute] = useState<keyof typeof slopeRouteOptions>("straight");
+  const [clickerTarget, setClickerTarget] = useState<keyof typeof clickerTargetOptions>("idle");
+  const [clickerRoute, setClickerRoute] = useState<keyof typeof clickerRouteOptions>("balanced");
   const [defending, setDefending] = useState(true);
   const [checkCount, setCheckCount] = useState(0);
   const [result, setResult] = useState(
-    mode === "slope"
+    mode === "clicker"
+      ? "Choose an upgrade goal and spending style, then check the next useful move."
+      : mode === "slope"
       ? "Choose a slope goal and track type, then check the cleanest way to start."
       : mode === "drive"
       ? "Choose a driving goal and route, then check the safest way to start."
@@ -60,6 +76,22 @@ export function RaidPlanner({ mode = "raid" }: RaidPlannerProps) {
   );
 
   function getRecommendation() {
+    if (mode === "clicker") {
+      const targetChoice = clickerTargetOptions[clickerTarget];
+      const routeChoice = clickerRouteOptions[clickerRoute];
+      const riskScore = targetChoice.risk + routeChoice.risk;
+
+      if (riskScore <= 2) {
+        return "Good move: buy the affordable upgrade, keep clicking, and let the next energy milestone arrive faster.";
+      }
+
+      if (riskScore <= 4) {
+        return "Balanced move: mix click power with idle income so progress continues while you compare costs.";
+      }
+
+      return "Longer play: save only if the next planet is close; otherwise buy smaller upgrades to raise production first.";
+    }
+
     if (mode === "slope") {
       const targetChoice = slopeTargetOptions[slopeTarget];
       const routeChoice = slopeRouteOptions[slopeRoute];
@@ -119,14 +151,18 @@ export function RaidPlanner({ mode = "raid" }: RaidPlannerProps) {
       <div className="portal-section-heading">
         <p className="eyebrow">Route check</p>
         <h2 id="raid-planner-title">
-          {mode === "slope"
+          {mode === "clicker"
+            ? "Plan the next upgrade"
+            : mode === "slope"
             ? "Plan a cleaner slope run"
             : mode === "drive"
               ? "Plan a cleaner drive"
               : "Plan a safer raid"}
         </h2>
         <p>
-          {mode === "slope"
+          {mode === "clicker"
+            ? "Use this quick check before pressing play. It helps you choose between click power, idle income, and saving for the next planet."
+            : mode === "slope"
             ? "Use this quick check before pressing play. It helps you choose a line, manage turns, and avoid wasting a run on a risky gap."
             : mode === "drive"
             ? "Use this quick check before pressing play. It helps you choose a route, manage boost, and avoid wasting a run on a bad angle."
@@ -141,7 +177,37 @@ export function RaidPlanner({ mode = "raid" }: RaidPlannerProps) {
           checkRoute();
         }}
       >
-        {mode === "slope" ? (
+        {mode === "clicker" ? (
+          <>
+            <label>
+              Goal
+              <select
+                value={clickerTarget}
+                onChange={(event) => setClickerTarget(event.target.value as keyof typeof clickerTargetOptions)}
+              >
+                {Object.entries(clickerTargetOptions).map(([value, option]) => (
+                  <option key={value} value={value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </label>
+
+            <label>
+              Spending
+              <select
+                value={clickerRoute}
+                onChange={(event) => setClickerRoute(event.target.value as keyof typeof clickerRouteOptions)}
+              >
+                {Object.entries(clickerRouteOptions).map(([value, option]) => (
+                  <option key={value} value={value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </>
+        ) : mode === "slope" ? (
           <>
             <label>
               Goal
@@ -239,7 +305,13 @@ export function RaidPlanner({ mode = "raid" }: RaidPlannerProps) {
         ) : null}
 
         <button type="submit">
-          {mode === "slope" ? "Check run" : mode === "drive" ? "Check drive" : "Check route"}
+          {mode === "clicker"
+            ? "Check upgrade"
+            : mode === "slope"
+              ? "Check run"
+              : mode === "drive"
+                ? "Check drive"
+                : "Check route"}
         </button>
       </form>
 
