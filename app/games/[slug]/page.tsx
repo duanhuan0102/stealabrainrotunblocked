@@ -45,6 +45,8 @@ export async function generateMetadata({
           ? "Bear Clicker Online - Play Free"
         : game.slug === "football-bros"
           ? "Football Bros Game Online - Play Free"
+        : game.slug === "slope-unblocked"
+          ? "Slope Unblocked - Play Free Online"
         : game.slug === "snow-rider-3d-unblocked"
           ? "Snow Rider 3D Unblocked - Play Free"
         : `${game.name} - Play Online Free`,
@@ -53,6 +55,7 @@ export async function generateMetadata({
     absoluteTitle:
       game.slug === "steal-a-brainrot-unblocked" ||
       game.slug === "acceleration-city" ||
+      game.slug === "slope-unblocked" ||
       game.slug === "snow-rider-3d-unblocked" ||
       game.publishedAt > standaloneTitleAfter,
     type: "article",
@@ -142,6 +145,7 @@ export default async function GamePage({ params }: GamePageProps) {
 
         {game.slug === "steal-a-brainrot-unblocked" ? <RaidPlanner /> : null}
         {game.slug === "acceleration-city" ? <RaidPlanner mode="drive" /> : null}
+        {game.slug === "slope-unblocked" ? <RaidPlanner mode="slope" /> : null}
         {game.slug === "snow-rider-3d-unblocked" ? <RaidPlanner mode="drive" /> : null}
 
         <AdSlot />

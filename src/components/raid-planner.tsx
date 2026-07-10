@@ -26,8 +26,20 @@ const driveRouteOptions = {
   narrow: { label: "Narrow shortcut", risk: 2 },
 };
 
+const slopeTargetOptions = {
+  center: { label: "Stay centered", risk: 1 },
+  gaps: { label: "Clear narrow gaps", risk: 2 },
+  score: { label: "Push score pace", risk: 3 },
+};
+
+const slopeRouteOptions = {
+  straight: { label: "Straight platforms", risk: 0 },
+  tilted: { label: "Tilted track", risk: 1 },
+  blocks: { label: "Red block cluster", risk: 2 },
+};
+
 interface RaidPlannerProps {
-  mode?: "raid" | "drive";
+  mode?: "raid" | "drive" | "slope";
 }
 
 export function RaidPlanner({ mode = "raid" }: RaidPlannerProps) {
@@ -35,15 +47,35 @@ export function RaidPlanner({ mode = "raid" }: RaidPlannerProps) {
   const [route, setRoute] = useState<keyof typeof routeOptions>("clear");
   const [driveTarget, setDriveTarget] = useState<keyof typeof driveTargetOptions>("ramp");
   const [driveRoute, setDriveRoute] = useState<keyof typeof driveRouteOptions>("open");
+  const [slopeTarget, setSlopeTarget] = useState<keyof typeof slopeTargetOptions>("center");
+  const [slopeRoute, setSlopeRoute] = useState<keyof typeof slopeRouteOptions>("straight");
   const [defending, setDefending] = useState(true);
   const [checkCount, setCheckCount] = useState(0);
   const [result, setResult] = useState(
-    mode === "drive"
+    mode === "slope"
+      ? "Choose a slope goal and track type, then check the cleanest way to start."
+      : mode === "drive"
       ? "Choose a driving goal and route, then check the safest way to start."
       : "Choose a target and route, then check whether this raid is worth taking.",
   );
 
   function getRecommendation() {
+    if (mode === "slope") {
+      const targetChoice = slopeTargetOptions[slopeTarget];
+      const routeChoice = slopeRouteOptions[slopeRoute];
+      const riskScore = targetChoice.risk + routeChoice.risk;
+
+      if (riskScore <= 2) {
+        return "Good line: stay near center, use short taps, and keep your eyes one platform ahead.";
+      }
+
+      if (riskScore <= 4) {
+        return "Playable line: enter straight, avoid wide zigzags, and recover before the next red block.";
+      }
+
+      return "High risk: slow your inputs, choose the widest gap, and skip any lane that needs a late turn.";
+    }
+
     if (mode === "drive") {
       const targetChoice = driveTargetOptions[driveTarget];
       const routeChoice = driveRouteOptions[driveRoute];
@@ -87,10 +119,16 @@ export function RaidPlanner({ mode = "raid" }: RaidPlannerProps) {
       <div className="portal-section-heading">
         <p className="eyebrow">Route check</p>
         <h2 id="raid-planner-title">
-          {mode === "drive" ? "Plan a cleaner drive" : "Plan a safer raid"}
+          {mode === "slope"
+            ? "Plan a cleaner slope run"
+            : mode === "drive"
+              ? "Plan a cleaner drive"
+              : "Plan a safer raid"}
         </h2>
         <p>
-          {mode === "drive"
+          {mode === "slope"
+            ? "Use this quick check before pressing play. It helps you choose a line, manage turns, and avoid wasting a run on a risky gap."
+            : mode === "drive"
             ? "Use this quick check before pressing play. It helps you choose a route, manage boost, and avoid wasting a run on a bad angle."
             : "Use this quick check before pressing play. It helps you decide whether to attack now, wait for space, or defend your base first."}
         </p>
@@ -103,7 +141,37 @@ export function RaidPlanner({ mode = "raid" }: RaidPlannerProps) {
           checkRoute();
         }}
       >
-        {mode === "drive" ? (
+        {mode === "slope" ? (
+          <>
+            <label>
+              Goal
+              <select
+                value={slopeTarget}
+                onChange={(event) => setSlopeTarget(event.target.value as keyof typeof slopeTargetOptions)}
+              >
+                {Object.entries(slopeTargetOptions).map(([value, option]) => (
+                  <option key={value} value={value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </label>
+
+            <label>
+              Track
+              <select
+                value={slopeRoute}
+                onChange={(event) => setSlopeRoute(event.target.value as keyof typeof slopeRouteOptions)}
+              >
+                {Object.entries(slopeRouteOptions).map(([value, option]) => (
+                  <option key={value} value={value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </>
+        ) : mode === "drive" ? (
           <>
             <label>
               Goal
@@ -170,7 +238,9 @@ export function RaidPlanner({ mode = "raid" }: RaidPlannerProps) {
           </label>
         ) : null}
 
-        <button type="submit">{mode === "drive" ? "Check drive" : "Check route"}</button>
+        <button type="submit">
+          {mode === "slope" ? "Check run" : mode === "drive" ? "Check drive" : "Check route"}
+        </button>
       </form>
 
       <p className="raid-planner__result" aria-live="polite">

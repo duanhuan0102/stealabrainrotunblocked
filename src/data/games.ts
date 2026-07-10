@@ -700,7 +700,7 @@ export const games: Game[] = [
     tagline:
       "Steer a neon ball down a fast 3D slope, dodge red blocks, and chase a cleaner high-score run.",
     description:
-      "Play Slope Unblocked online for free. Steer a neon ball down a fast 3D slope, dodge red obstacles, survive sharp turns, and chase a higher score.",
+      "Play Slope Unblocked online for free. Steer a neon ball down a fast 3D track, dodge red obstacles, survive sharp turns, and chase a higher score.",
     instructions: [
       "Click inside the game frame, press Play Now if the OzGames loader appears, and wait for the 3D track to start.",
       "Use the Left and Right arrow keys, or A and D, to steer the rolling ball across the slope.",
@@ -710,17 +710,18 @@ export const games: Game[] = [
     ],
     content: [
       {
-        heading: "Play Slope Unblocked online",
+        heading: "Play the 3D slope runner online",
         paragraphs: [
           "Slope Unblocked is a fast 3D arcade runner built around one clear challenge: keep a neon ball alive while it rolls down an endless slope. The track drops forward automatically, speed keeps building, and every second asks for a small steering correction before the next turn, gap, or red obstacle arrives.",
-          "This Slope Unblocked page uses the public OzGames embed, so there is no download and no local game package stored in this project. Open the player, let the iframe finish loading, and play Slope Unblocked online from the browser with the guide, controls, and related games available on the same page.",
+          "This browser version uses the public OzGames embed, so there is no download and no local game package stored in this project. Open the player, let the iframe finish loading, and play from the browser with the guide, controls, and related games available on the same page.",
+          "The page now includes a quick slope run checker before the walkthrough. Pick the kind of track section you want to practice, choose a goal, and use the recommendation to decide whether to stay centered, take a wider gap, or slow your steering inputs.",
         ],
       },
       {
         heading: "What kind of game is Slope?",
         paragraphs: [
           "Slope is best described as an endless high-score game with racing pressure. You are not racing another car or clearing fixed levels; you are racing the track itself. The ball accelerates, the camera pushes forward, and the road keeps changing shape until a bad angle sends you off the side or into an obstacle.",
-          "That simple loop is why many players search for Slope Unblocked, Slope game, Slope online, or a Slope Unblocked game that opens quickly. The rules are easy to understand in the first few seconds, but the run becomes demanding because the track punishes oversteering, late reactions, and panic movements.",
+          "That simple loop is why many players search for the unblocked Slope game, Slope online, or a browser runner that opens quickly. The rules are easy to understand in the first few seconds, but the run becomes demanding because the track punishes oversteering, late reactions, and panic movements.",
         ],
         bullets: [
           "Endless 3D slope running with no fixed finish line.",
@@ -731,8 +732,9 @@ export const games: Game[] = [
       {
         heading: "Controls and first-run tips",
         paragraphs: [
-          "The main Slope Unblocked controls are intentionally simple. Use the Left and Right arrow keys, or A and D, to guide the ball. You do not press a separate gas button, brake button, or jump button. Gravity and the slope create the speed, while your job is to keep the ball lined up with the safest part of the next platform.",
+          "The main controls are intentionally simple. Use the Left and Right arrow keys, or A and D, to guide the ball. You do not press a separate gas button, brake button, or jump button. Gravity and the slope create the speed, while your job is to keep the ball lined up with the safest part of the next platform.",
           "Your first few runs should be about learning restraint. Holding a direction too long can be worse than reacting late because the ball slides quickly at higher speed. Tap lightly, return toward the center after each turn, and look ahead of the ball instead of staring directly at it. The earlier you read a bend, the less dramatic your correction needs to be.",
+          "If the frame loads but the ball does not respond, click inside the play area once before pressing the keys again. Web games inside iframes often need focus before keyboard input reaches the canvas.",
         ],
         bullets: [
           "Use short taps once the ball starts moving quickly.",
@@ -743,8 +745,9 @@ export const games: Game[] = [
       {
         heading: "How to survive longer runs",
         paragraphs: [
-          "Good Slope Unblocked strategy starts with clean positioning. The center of the track gives you more time to react in either direction, especially when the road tilts or narrows. If you drift too far left or right, the next bend can force a desperate correction that sends the ball into a wall or off the platform.",
+          "Good strategy starts with clean positioning. The center of the track gives you more time to react in either direction, especially when the road tilts or narrows. If you drift too far left or right, the next bend can force a desperate correction that sends the ball into a wall or off the platform.",
           "As speed increases, treat every input as a small adjustment instead of a hard turn. Red blocks are dangerous because they often appear right after a curve or drop, so avoid entering a new platform at a sharp angle. A calmer line may feel slower, but it usually keeps the run alive longer than chasing every open lane at the last moment.",
+          "Longer runs also depend on recovery. After a dangerous gap, bring the ball back toward the middle before thinking about the next shortcut. A clean exit from one platform is often more valuable than a perfect dodge that leaves you sliding toward the edge.",
         ],
         bullets: [
           "Recover to the center after clearing a dangerous section.",
@@ -755,8 +758,31 @@ export const games: Game[] = [
       {
         heading: "Unblocked access, fullscreen, and devices",
         paragraphs: [
-          "Players often look for Slope Unblocked fullscreen, Slope Unblocked 3D, or play Slope Unblocked from a school Chromebook because the game works best when the track is large and easy to read. Use the full-screen option in the player if it is available, and click inside the frame before steering so the browser sends keyboard input to the game.",
+          "Players often look for fullscreen Slope, 3D Slope, or a school Chromebook version because the game works best when the track is large and easy to read. Use the full-screen option in the player if it is available, and click inside the frame before steering so the browser sends keyboard input to the game.",
           "Access can still depend on the network because the playable frame loads from OzGames. The current embed URL returns normally and does not send common frame-blocking headers, which makes it suitable for this game page, but a school, work, or public connection can still block third-party game assets. Desktop and Chromebook browsers are the safest choice; tablets may work with a keyboard, while phones are less ideal for this keyboard-first runner.",
+        ],
+      },
+      {
+        heading: "Slope route planning practice",
+        paragraphs: [
+          "A useful practice session starts with one narrow goal. Spend one run staying near the center, one run taking only the safest visible gaps, and one run focusing on recovery after tilted platforms. Separating those goals makes each mistake easier to understand.",
+          "Route planning does not mean memorizing the endless track. It means reading two moves ahead: the platform you are on now, the landing or gap coming next, and the amount of space left after the dodge. When those three details line up, the ball feels easier to control even as speed rises.",
+          "Use the on-page route checker when you want a quick plan before pressing play. The recommendations are intentionally simple because this runner rewards calm execution more than complicated strategy.",
+        ],
+      },
+      {
+        heading: "Common mistakes on fast tracks",
+        paragraphs: [
+          "The most common mistake is overcorrecting after a clean dodge. If the ball has already cleared a red block, a second hard turn can create the next crash. Let the ball settle, then make a smaller adjustment toward the center.",
+          "Another mistake is staring at the ball instead of the track ahead. Keep your eyes slightly forward so red blocks, gaps, and tilted sections enter your plan earlier. More warning time means fewer panic turns.",
+          "Do not chase every open lane. A gap that looks possible at the last moment may still leave a poor landing angle. Choose the line that gives you control after the dodge, not only the line that avoids the obstacle in front of you.",
+        ],
+      },
+      {
+        heading: "Score-building routine",
+        paragraphs: [
+          "If you want a higher score, build consistency before speed. Start with short sessions where the only goal is to avoid wide zigzags. Once that feels natural, practice entering gaps straight and recovering after each landing.",
+          "Review crashes by cause: late reaction, too much steering, bad landing, or choosing a narrow lane when a wider one was available. That simple review turns each failed run into a useful adjustment for the next attempt.",
         ],
       },
     ],
